@@ -3,6 +3,11 @@ div[class^="newMemberBadge-"] {
   display: none;
 }
 
+// get rid of thread suggestion bar
+div[class^="threadSuggestionBar-"] {
+  display: none;
+}
+
 // better shrunken screen
 @media screen and (max-width: 1100px) {
   [class^="nameTag-"],
