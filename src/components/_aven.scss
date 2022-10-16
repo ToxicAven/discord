@@ -93,8 +93,8 @@ ul[class*="channelAttachmentArea-"] {
   transform: scale(0.8);
 }
 
-[class^="closeButton-30b1gR"],
-[class^="button-1iHNQ2"] {
+[class^="closeButton-"],
+[class^="button-"] {
   height: 23px;
   line-height: 23px;
   top: 4px;
@@ -156,7 +156,7 @@ ul[class*="channelAttachmentArea-"] {
 }
 
 /* Show edit timestamps in the edited message */
-[class*="timestamp-"]:not([class*="timestampInline-"], [class*="timestampVisibleOnHover-9PEuZS"])
+[class*="timestamp-"]:not([class*="timestampInline-"], [class*="timestampVisibleOnHover-"])
   time::after {
   content: " (" attr(aria-label) ")";
   color: var(--text-muted);
