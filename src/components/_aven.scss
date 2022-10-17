@@ -98,13 +98,6 @@ ul[class*="channelAttachmentArea-"] {
   transform: scale(0.8);
 }
 
-[class^="closeButton-"],
-[class^="button-"] {
-  height: 23px;
-  line-height: 23px;
-  top: 4px;
-}
-
 // round spotify album covers
 [class*="assetsLargeImageSpotify-"] {
   border-radius: 8px;
