@@ -172,3 +172,134 @@ ul[class*="channelAttachmentArea-"] {
 [class^="groupStart-"] {
   display: none;
 }
+
+// Emoji picker (credit Obscure-git), ported to wildcards by me
+[class^="emojiPicker"] > [class^="header-"] {
+  --webkit-shadow: none;
+  box-shadow: none !important;
+  filter: none;
+}
+
+#emoji-picker-tab-panel [class^="header-"] {
+  padding-top: 16px;
+}
+
+[class*="positionLayer-"][class*="layer-"] {
+  bottom: 135px !important;
+}
+
+div#popout_7505 {
+  top: 500px !important;
+  right: 265px !important;
+}
+
+[class^="contentWrapper-"] {
+  grid-template-rows: auto;
+  min-height: 442px !important;
+}
+
+[class^="contentWrapper-"] [class^="nav-"],
+[class^="contentWrapper-"] [class^="navList-"] {
+  position: fixed;
+  bottom: 90px;
+  height: 40px;
+  width: 392px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color: var(--background-tertiary);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 101;
+}
+
+[class*="inspector-"][class*="inspector-"] {
+  height: 0;
+  display: none;
+}
+
+[class^="bodyWrapper-"] {
+  height: 320px;
+  margin-top: -5px;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+[class^="drawerSizingWrapper-"] {
+  height: 442px !important;
+  max-width: 424px;
+}
+
+[class^="drawerSizingWrapper-"] [class^="resizeHandle-"] {
+  display: none;
+  cursor: default;
+}
+
+#emoji-picker-tab-panel [class*="wrapper="][class*="categoryList-"] {
+  transform: rotate(-90deg);
+  transform: rotate(-90deg) translateX(225px) translateY(190px);
+  height: 400px;
+  padding-top: 0px !important;
+  border-radius: 10px;
+}
+
+#emoji-picker-tab-panel
+  [class*="wrapper="][class*="categoryList-"]
+  [class^="listItems-"]
+  [class^="categoryItem-"],
+#emoji-picker-tab-panel
+  [class*="wrapper="][class*="categoryList-"]
+  [class^="unicodeShortcut-"] {
+  transform: rotate(90deg);
+}
+
+#emoji-picker-tab-panel
+  [class*="wrapper="][class*="categoryList-"]
+  [class^="unicodeShortcut-"],
+#emoji-picker-tab-panel
+  [class*="wrapper="][class*="categoryList-"]
+  [class*="scroller-"],
+#emoji-picker-tab-panel
+  [class*="wrapper="][class*="categoryList-"]
+  [class^="listItems-"] {
+  background: var(--background-tertiary) !important;
+  border-radius: 10px;
+}
+
+#emoji-picker-tab-panel [class^="emojiPicker-"] {
+  grid-template-rows: 46px auto calc(calc(48px * 2) + 8px) !important;
+  grid-template-columns: 0 auto !important;
+  position: relative !important;
+  padding-top: 65px;
+  height: 420px;
+  width: 428px;
+  border-radius: 5px !important;
+}
+
+#emoji-picker-tab-panel [class^="emojiPicker-"] [class*="emoji-"] {
+  margin-left: -5px !important;
+}
+
+#emoji-picker-tab-panel [class^="emojiPicker-"] [class*="searchBar-"],
+#emoji-picker-tab-panel [class^="emojiPicker-"] [class*="inspector-"] {
+  background: var(--background-primary) !important;
+}
+
+#gif-picker-tab-panel [class*="searchBar-"] {
+  background: var(--background-primary) !important;
+}
+
+#sticker-picker-tab [class*="container-"],
+[class*="inner-1NoIT5"] {
+  background: var(--background-primary) !important;
+}
+
+[class*="emojiItem-"] [class*="emojiItemImageLoading-"] {
+  /* Fix Loading Emojis */
+  background-image: none;
+  background-color: var(--background-primary) !important;
+  border-radius: 30%;
+}
