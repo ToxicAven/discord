@@ -167,3 +167,8 @@ ul[class*="channelAttachmentArea-"] {
 [class*="edited-"] {
   display: none;
 }
+
+// Hide blocked messages
+[class^="groupStart-"] {
+  display: none;
+}
