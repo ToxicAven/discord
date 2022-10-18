@@ -182,6 +182,7 @@ ul[class*="channelAttachmentArea-"] {
   display: none;
 }
 
+/*
 // Emoji picker (credit Obscure-git), ported to wildcards by me
 [class^="emojiPicker"] > [class^="header-"] {
   --webkit-shadow: none;
@@ -204,6 +205,8 @@ div#popout_7505 {
 
 [class^="contentWrapper-"] {
   grid-template-rows: auto;
+  padding-top: 0px;
+  padding-bottom: 5px;
   min-height: 442px !important;
 }
 
@@ -233,8 +236,6 @@ div#popout_7505 {
 [class^="bodyWrapper-"] {
   height: 320px;
   margin-top: -5px;
-  padding-left: 10px;
-  padding-right: 5px;
 }
 
 [class^="drawerSizingWrapper-"] {
@@ -307,8 +308,9 @@ div#popout_7505 {
 }
 
 [class*="emojiItem-"] [class*="emojiItemImageLoading-"] {
-  /* Fix Loading Emojis */
+  // Fix Loading Emojis
   background-image: none;
   background-color: var(--background-primary) !important;
   border-radius: 30%;
 }
+*/
