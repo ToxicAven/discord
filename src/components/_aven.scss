@@ -11,6 +11,7 @@ div[class^="threadSuggestionBar-"] {
 // better shrunken screen
 @media screen and (max-width: 1100px) {
   [class^="nameTag-"],
+  [class^="panels-"] [class^="container-"] [class^="flex-"] [class^="inner-"],
   [class*="membersWrap-"][class*="hiddenMembers-"] {
     display: none;
   }
@@ -32,6 +33,14 @@ div[class^="threadSuggestionBar-"] {
 // Shrink codeblocks to as big as they need to be
 [class^="markup-"] code {
   width: fit-content;
+}
+
+// remove Gift and Sticker buttons
+div[class^="channelTextArea-"] {
+  div[class^="buttons-"] > *:nth-child(1),
+  div[class^="buttons-"] > *:nth-child(3) {
+    display: none;
+  }
 }
 
 // upload animation
