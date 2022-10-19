@@ -35,6 +35,16 @@ div[class^="threadSuggestionBar-"] {
   width: fit-content;
 }
 
+// make members list fill all the space so the color is consistent
+[class*="membersWrap"] {
+  min-height: 100%;
+}
+
+// remove 1st message sticker button
+[class*="containerExpanded-"] {
+  display: none;
+}
+
 // remove Gift and Sticker buttons
 div[class^="channelTextArea-"] {
   div[class^="buttons-"] > *:nth-child(1),
