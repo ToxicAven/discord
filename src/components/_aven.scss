@@ -107,8 +107,13 @@ ul[class*="channelAttachmentArea-"] {
   transform: scale(0.8);
 }
 
-// Gradient discord logo
+// force emoji picker icon to be :pleading_face:
+[class^="sprite-"],
+[class^="sprite-"]:hover {
+  background-position: -66px -88px !important;
+}
 
+// Gradient discord logo
 svg[class^="homeIcon-"] {
   color: rgb(17, 17, 27);
 }
