@@ -107,6 +107,34 @@ ul[class*="channelAttachmentArea-"] {
   transform: scale(0.8);
 }
 
+// Gradient discord logo
+
+/*
+svg[class^="homeIcon-"] {
+  color: rgb(17, 17, 27);
+}
+*/
+
+[class^="childWrapper-"] {
+  background: linear-gradient(-45deg, $peach, $red, $sky, $green);
+  animation: gradientBG 10s ease infinite;
+  background-size: 400% 400%;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 // round spotify album covers
 [class*="assetsLargeImageSpotify-"] {
   border-radius: 8px;
