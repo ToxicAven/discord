@@ -223,6 +223,22 @@ svg[class^="homeIcon-"] {
   display: none;
 }
 
+// Jetbrains Mono code
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap");
+[class^="markdown-"] [class^="codeInline-"],
+[class^="codeLine-"],
+[class^="codeBlockText-"],
+[class^="durationTimeDisplay-"],
+[class^="durationTimeSeparator-"],
+[class*="after_inlineCode-"],
+[class*="before_inlineCode-"],
+[class^="inlineCode-"],
+code.inline,
+code,
+.hljs {
+  font-family: "Jetbrains Mono" !important;
+}
+
 /*
 // Emoji picker (credit Obscure-git), ported to wildcards by me
 [class^="emojiPicker"] > [class^="header-"] {
