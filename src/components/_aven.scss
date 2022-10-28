@@ -14,7 +14,7 @@ div[class^="threadSuggestionBar-"] {
 }
 
 // get rid of the discord themed popouts
-[class*="profileColors-"] {
+[class*="profileColors-"][class*="theme-light"] {
   --profile-gradient-primary-color: unset !important;
   --profile-gradient-secondary-color: unset !important;
   --profile-gradient-button-color: unset !important;
