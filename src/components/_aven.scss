@@ -71,6 +71,24 @@ div[class^="threadSuggestionBar-"] {
   display: none;
 }
 
+// collapsing sidebar header banner
+[class*="animatedContainer-"] {
+  opacity: 1 !important;
+  transition: opacity 0.5s;
+}
+[class*="animatedContainer-"] > [class*="bannerImage-"] {
+  transition: margin 0.5s;
+}
+:not([class*="bannerVisible-"]) > [class*="animatedContainer-"] {
+  opacity: 0.35 !important;
+  height: 138px;
+}
+:not([class*="bannerVisible-"])
+  > [class*="animatedContainer-"]
+  > [class*="bannerImage-"] {
+  margin-top: -12px;
+}
+
 // Patch stupid resize webm bug
 div:not([data-fullscreen="true"]):not([class^="image"])
   > video:not([class^="gif"]) {
