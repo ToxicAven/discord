@@ -288,6 +288,11 @@ svg[class^="homeIcon-"] {
   display: none;
 }
 
+// Remove the help button in the top right
+[class*="toolbar-"] [class*="anchor-"] {
+  display: none;
+}
+
 // Jetbrains Mono codeblocks
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 [class^="markdown-"] [class^="codeInline-"],
