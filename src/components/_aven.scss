@@ -60,6 +60,12 @@ div[class^="threadSuggestionBar-"] {
   }
 }
 
+// Patch stupid resize webm bug
+div:not([data-fullscreen="true"]):not([class^="image"])
+  > video:not([class^="gif"]) {
+  height: 300px !important;
+}
+
 // Shrink codeblocks to as big as they need to be
 [class^="markup-"] code {
   width: fit-content;
