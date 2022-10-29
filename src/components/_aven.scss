@@ -213,6 +213,22 @@ svg[class^="homeIcon-"] {
   }
 }
 
+// Messages slide in from the right
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+[class*="message-2CShn3"] {
+  animation: slide-in 0.4s ease;
+}
+
 // Round spotify album covers
 [class*="assetsLargeImageSpotify-"] {
   border-radius: 8px;
