@@ -218,6 +218,46 @@ svg[class^="homeIcon-"] {
   border-radius: 8px;
 }
 
+// Non-invasive connection problems modal
+[class*="container"][class*="fixClipping"] {
+  background: transparent;
+  pointer-events: none;
+
+  [class*="anchor-"] {
+    pointer-events: auto;
+  }
+
+  [class*="content-"] [class*="text-"] {
+    display: none;
+  }
+
+  [class*="ready-"] {
+    position: absolute;
+    bottom: 44px;
+    right: 244px;
+    z-index: 1;
+  }
+
+  img,
+  video {
+    width: 32px;
+    height: 32px;
+  }
+
+  [class*="problems-"] {
+    padding: 8px 16px;
+    bottom: 18px;
+    left: unset;
+    right: 18px;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--background-floating);
+    border-radius: 8px;
+    -webkit-box-shadow: var(--elevation-stroke), var(--elevation-medium);
+    box-shadow: var(--elevation-stroke), var(--elevation-medium);
+  }
+}
+
 // Cool looking Jump to Present message button
 [class*="jumpToPresentBar"] {
   display: contents;
