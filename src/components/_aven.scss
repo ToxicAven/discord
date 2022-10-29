@@ -215,7 +215,7 @@ svg[class^="homeIcon-"] {
 
 // Messages slide in from the right
 
-[class*="message-"]:not([class*="isSending-"]) {
+[class*="message-"] {
   animation: slide-in 0.4s ease;
 }
 
