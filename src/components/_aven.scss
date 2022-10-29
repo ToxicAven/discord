@@ -3,17 +3,17 @@ div[class^="newMemberBadge-"] {
   display: none;
 }
 
-// get rid of thread suggestion bar
+// Get rid of thread suggestion bar
 div[class^="threadSuggestionBar-"] {
   display: none;
 }
 
-// remove user popout upsell
+// Remove nitro user popout dropdown upsell
 [class*="userPopoutInner-"] [class*="upsell-"] {
   display: none;
 }
 
-// get rid of the discord themed popouts
+// Get rid of the custom nitro light mode themed popouts
 [class*="profileColors-"][class*="theme-light"] {
   --profile-gradient-primary-color: unset !important;
   --profile-gradient-secondary-color: unset !important;
@@ -38,7 +38,7 @@ div[class^="threadSuggestionBar-"] {
   }
 }
 
-// better shrunken screen
+// Better shrunken screen
 @media screen and (max-width: 1100px) {
   [class^="nameTag-"],
   [class^="panels-"] [class^="container-"] [class^="flex-"] [class^="inner-"],
@@ -60,7 +60,7 @@ div[class^="threadSuggestionBar-"] {
   }
 }
 
-// remove spotify play button on the upload button
+// Remove spotify play button on the upload button
 .attachButtonPlus-3IYelE {
   d: path(
     "M12 2.00098C6.486 2.00098 2 6.48698 2 12.001C2 17.515 6.486 22.001 12 22.001C17.514 22.001 22 17.515 22 12.001C22 6.48698 17.514 2.00098 12 2.00098ZM17 13.001H13V17.001H11V13.001H7V11.001H11V7.00098H13V11.001H17V13.001Z"
@@ -71,7 +71,7 @@ div[class^="threadSuggestionBar-"] {
   display: none;
 }
 
-// collapsing sidebar header banner
+// Collapsing sidebar header banner
 [class*="animatedContainer-"] {
   opacity: 1 !important;
   transition: opacity 0.5s;
@@ -89,7 +89,7 @@ div[class^="threadSuggestionBar-"] {
   margin-top: -12px;
 }
 
-// Patch stupid resize webm bug
+// Patch stupid resizing webm bug
 div:not([data-fullscreen="true"]):not([class^="image"])
   > video:not([class^="gif"]) {
   height: 300px !important;
@@ -100,17 +100,17 @@ div:not([data-fullscreen="true"]):not([class^="image"])
   width: fit-content;
 }
 
-// make members list fill all the space so the color is consistent
+// Make members list fill all the space so the color is consistent
 [class*="membersWrap"] {
   min-height: 100%;
 }
 
-// remove 1st message sticker button
+// Remove 1st message sticker button
 [class*="containerExpanded-"] {
   display: none;
 }
 
-// remove Gift and Sticker buttons
+// Remove Gift and Sticker buttons
 div[class^="channelTextArea-"] {
   div[class^="buttons-"] > *:nth-child(1),
   div[class^="buttons-"] > *:nth-child(3) {
@@ -118,7 +118,7 @@ div[class^="channelTextArea-"] {
   }
 }
 
-// upload animation
+// File upload animation
 @keyframes attachmentAnimation {
   from {
     height: 0;
@@ -182,7 +182,7 @@ ul[class*="channelAttachmentArea-"] {
   transform: scale(0.8);
 }
 
-// force emoji picker icon to be :pleading_face:
+// Force emoji picker icon to be :pleading_face:
 [class^="sprite-"],
 [class^="sprite-"]:hover {
   background-position: -66px -88px !important;
@@ -213,7 +213,7 @@ svg[class^="homeIcon-"] {
   }
 }
 
-// round spotify album covers
+// Round spotify album covers
 [class*="assetsLargeImageSpotify-"] {
   border-radius: 8px;
 }
@@ -288,7 +288,7 @@ svg[class^="homeIcon-"] {
   display: none;
 }
 
-// Jetbrains Mono code
+// Jetbrains Mono codeblocks
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 [class^="markdown-"] [class^="codeInline-"],
 [class^="codeLine-"],
