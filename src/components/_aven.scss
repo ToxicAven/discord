@@ -227,13 +227,10 @@ svg[class^="homeIcon-"] {
     pointer-events: auto;
   }
 
-  [class*="content-"] [class*="text-"] {
-    display: none;
-  }
-
   img,
   video,
-  [class*="ready-"] {
+  [class*="ready-"],
+  [class*="content-"] [class*="text-"] {
     display: none;
   }
 
