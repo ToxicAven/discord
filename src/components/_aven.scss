@@ -231,17 +231,10 @@ svg[class^="homeIcon-"] {
     display: none;
   }
 
-  [class*="ready-"] {
-    position: absolute;
-    bottom: 44px;
-    right: 244px;
-    z-index: 1;
-  }
-
   img,
-  video {
-    width: 32px;
-    height: 32px;
+  video,
+  [class*="ready-"] {
+    display: none;
   }
 
   [class*="problems-"] {
