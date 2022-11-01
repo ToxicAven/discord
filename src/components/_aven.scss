@@ -29,7 +29,8 @@ div[class^="threadSuggestionBar-"] {
   --profile-role-pill-background-color: unset !important;
   --profile-role-pill-border-color: unset !important;
 
-  [class*="avatarHoverTarget-"] circle {
+  [class*="avatarHoverTarget-"] circle,
+  [class*="avatar-"] circle {
     display: none;
   }
 
