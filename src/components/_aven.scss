@@ -30,7 +30,8 @@ div[class^="threadSuggestionBar-"] {
   --profile-role-pill-border-color: unset !important;
 
   [class*="avatarHoverTarget-"] circle,
-  [class*="avatar-"] circle {
+  [class*="avatar-"] circle,
+  [class*="avatar-"] rect:not([class^="pointerEvents-"]) {
     display: none;
   }
 
