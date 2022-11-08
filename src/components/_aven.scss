@@ -220,6 +220,11 @@ svg[class^="homeIcon-"] {
   border-radius: 8px;
 }
 
+// Remove sticker suggestion popup (why discord why)
+[class*="container-"][class*="stickerIconOffset-"] {
+  display: none;
+}
+
 // Non-invasive connection problems modal
 [class*="container"][class*="fixClipping"] {
   background: transparent;
