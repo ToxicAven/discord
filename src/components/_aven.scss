@@ -310,21 +310,6 @@ form [class*="channelTextArea-"] [class*="container-"] {
   transition: margin 150ms 1.1s;
 }
 
-// [class*="scroller-"][class*="none-"]
-// when the second (ignore the first) [class*="tutorialContainer-"] is hovered, make the proceeding [class^="listItem-"] appear and move down
-ul[class^="tree-3agP2X"] [class*="scroller-"][class*="none-"] {
-  // second tutorialContainer
-  [class*="tutorialContainer-"]:nth-child(2) + [class^="listItem-"] {
-    opacity: 0;
-  }
-
-  [class*="tutorialContainer-"]:nth-child(2):hover + [class^="listItem-"] {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.2s, transform 0.2s;
-  }
-}
-
 /* Show edit timestamps in the edited message */
 [class*="timestamp-"]:not([class*="timestampInline-"], [class*="timestampVisibleOnHover-"])
   time::after {
