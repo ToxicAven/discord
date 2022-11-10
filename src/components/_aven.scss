@@ -225,8 +225,8 @@ svg[class^="homeIcon-"] {
 }
 
 // Remove sticker suggestion popup (why discord why)
-[class*="container-"][class*="stickerIconOffset-"],
-form [class*="channelTextArea-"] [class*="container-"] {
+[class*="container-"][class*="stickerIconOffset-"]
+/*form [class*="channelTextArea-"] [class*="container-"] */ {
   display: none;
 }
 
