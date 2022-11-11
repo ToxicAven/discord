@@ -96,7 +96,7 @@ div[class^="threadSuggestionBar-"] {
 }
 
 // Patch stupid resizing webm bug
-div:not([data-fullscreen="true"]):not([class^="image"])
+div:not([data-fullscreen="true"], [class*="media-engine-video"]):not([class^="image"])
   > video:not([class^="gif"]) {
   height: 300px !important;
 }
