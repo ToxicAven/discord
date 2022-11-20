@@ -1,4 +1,4 @@
-// Hide New member thing
+// Hide New member name badge
 div[class^="newMemberBadge-"] {
   display: none;
 }
@@ -101,17 +101,17 @@ div:not([data-fullscreen="true"], [class*="media-engine-video"]):not([class^="im
   height: 300px !important;
 }
 
-// Shrink codeblocks to as big as they need to be
+// Shrink codeblocks to only be as wide as necessary
 [class^="markup-"] code {
   width: fit-content;
 }
 
-// Make members list fill all the space so the color is consistent
+// Make members list fill all the way to the bottom of the screen
 [class*="membersWrap"] {
   min-height: 100%;
 }
 
-// Remove 1st message sticker button
+// Remove 1st message sticker button in DMs
 [class*="containerExpanded-"] {
   display: none;
 }
@@ -124,7 +124,13 @@ div[class^="channelTextArea-"] {
   }
 }
 
-// File upload animation
+// Rising file attachment animation
+ul[class*="channelAttachmentArea-"] {
+  animation-name: attachmentAnimation;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
 @keyframes attachmentAnimation {
   from {
     height: 0;
@@ -135,13 +141,7 @@ div[class^="channelTextArea-"] {
   }
 }
 
-ul[class*="channelAttachmentArea-"] {
-  animation-name: attachmentAnimation;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
-}
-
-// Collapsable search bar
+// Collapsible search bar
 [class*="title-"][class*="container-"]
   [class*="toolbar-"]
   [class*="search-"]
@@ -310,7 +310,7 @@ section[class*="chatContent-"] form [class*="container-"] {
   transition: margin 150ms 1.1s;
 }
 
-/* Show edit timestamps in the edited message */
+// Show edit timestamps in the edited message
 [class*="timestamp-"]:not([class*="timestampInline-"], [class*="timestampVisibleOnHover-"])
   time::after {
   content: " (" attr(aria-label) ")";
