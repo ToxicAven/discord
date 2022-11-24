@@ -34,7 +34,7 @@ div[class^="threadSuggestionBar-"] {
 }
 
 // optional sleepy oneko on message box
-[class^="channelTextArea"]::before {
+form [class^="channelTextArea"]::before {
   display: none;
   content: "";
   width: 32px;
