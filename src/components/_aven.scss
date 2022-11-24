@@ -33,6 +33,32 @@ div[class^="threadSuggestionBar-"] {
   display: none;
 }
 
+// optional sleepy oneko on message box
+[class^="channelTextArea"]::before {
+  display: none;
+  content: "";
+  width: 32px;
+  height: 32px;
+  bottom: calc(100% - 3px);
+  right: 10px;
+  position: absolute;
+  image-rendering: pixelated;
+  background-image: url("https://raw.githubusercontent.com/adryd325/oneko.js/main/oneko.gif");
+  animation: neko 1s infinite;
+}
+
+@keyframes neko {
+  0%,
+  50% {
+    background-position: -64px 0;
+  }
+
+  50.00001%,
+  100% {
+    background-position: -64px -32px;
+  }
+}
+
 // Various nitro cleanups
 [class*="userPopoutInner-"] [class*="upsell-"],
 [class^="premiumTier0Badge-"] {
