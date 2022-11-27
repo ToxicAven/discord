@@ -33,7 +33,12 @@ div[class^="threadSuggestionBar-"] {
   display: none;
 }
 
-// optional sleepy oneko on message box
+// Catppuccin: Background in call wrong if unfocused user bar is visible
+div[class^="callContainer-"] div[class*="tile"] {
+  background-color: $crust !important;
+}
+
+// Optional sleepy oneko on message box
 form [class^="channelTextArea"]::before {
   display: none;
   content: "";
