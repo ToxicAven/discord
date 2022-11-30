@@ -3,7 +3,18 @@ div[class^="newMemberBadge-"] {
   display: none;
 }
 
-// patch discords shitty status indicators update
+/* Current discord font selector. will likely use this if GG Sans blows
+:root {
+	--font-primary: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+*/
+
+// Make entire user about me visible
+[class*="lineClamp2Plus-"] {
+  -webkit-line-clamp: unset !important;
+}
+
+// Patch discords shitty status indicators update
 div[class*="status-"] {
   svg {
     // Online + Phone
