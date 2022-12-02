@@ -1,0 +1,134 @@
+@font-face {
+  font-family: Whitney;
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://toxicaven.dev/assets/Whitney-300-normal.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: Whitney;
+  font-style: italic;
+  font-weight: 300;
+  src: url("https://toxicaven.dev/assets/Whitney-300-italic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: Whitney;
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://toxicaven.dev/assets/Whitney-400-normal.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: Whitney;
+  font-style: italic;
+  font-weight: 400;
+  src: url("https://toxicaven.dev/assets/Whitney-400-italic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: Whitney;
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://toxicaven.dev/assets/Whitney-500-normal.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: Whitney;
+  font-style: italic;
+  font-weight: 500;
+  src: url("https://toxicaven.dev/assets/Whitney-500-italic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: Whitney;
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://toxicaven.dev/assets/Whitney-600-normal.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: Whitney;
+  font-style: italic;
+  font-weight: 600;
+  src: url("https://toxicaven.dev/assets/Whitney-600-italic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: Whitney;
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://toxicaven.dev/assets/Whitney-700-normal.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: Whitney;
+  font-style: italic;
+  font-weight: 700;
+  src: url("https://toxicaven.dev/assets/Whitney-700-italic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: ABC Ginto Normal;
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://toxicaven.dev/assets/ABC Ginto Normal-400-normal.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: ABC Ginto Normal;
+  font-style: italic;
+  font-weight: 400;
+  src: url("https://toxicaven.dev/assets/ABC Ginto Normal-400-italic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: ABC Ginto Normal;
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://toxicaven.dev/assets/ABC Ginto Normal-500-normal.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: ABC Ginto Normal;
+  font-style: italic;
+  font-weight: 500;
+  src: url("https://toxicaven.dev/assets/ABC Ginto Normal-500-italic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: ABC Ginto Normal;
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://toxicaven.dev/assets/ABC Ginto Normal-700-normal.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: ABC Ginto Normal;
+  font-style: italic;
+  font-weight: 700;
+  src: url("https://toxicaven.dev/assets/ABC Ginto Normal-700-italic.woff2")
+    format("woff2");
+}
+
+:root {
+  --font-primary: Whitney, "Helvetica Neue", "gg sans", Helvetica, Arial,
+    sans-serif !important;
+  --font-display: "ABC Ginto Normal", "Helvetica Neue", "gg sans", Helvetica,
+    Arial, sans-serif !important;
+}
