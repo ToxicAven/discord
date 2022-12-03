@@ -73,7 +73,7 @@ form [class^="channelTextArea"]::before {
 }
 
 // Various nitro cleanups
-[class*="userPopoutInner-"] [class*="upsell-"],
+[class*="userPopoutInner-"] > [class*="wrapper-"],
 [class^="premiumTier0Badge-"] {
   display: none;
 }
