@@ -237,8 +237,27 @@ div[class^="callContainer-"] {
     }
   }
 
-  div[class*="tile"] {
-    background-color: $base;
+  div[class*="tile-"],
+  div[class*="background-"] {
+    background-color: $base !important;
+  }
+
+  div[class*="overlayTitle"],
+  svg[class*="status-"] {
+    background-color: $surface0;
+    color: $text;
+  }
+
+  div[class*="header"],
+  svg[class*="selectedIcon-"] {
+    color: $text;
+  }
+
+  div[class*="button-"][class*="contents-"],
+  button[class*="cta-"],
+  button[class*="participantsButton-"] {
+    background-color: $surface0;
+    color: $text;
   }
 
   div[class^="videoControls-"] {
@@ -270,6 +289,11 @@ div[class^="callContainer-"] {
         background-color: $red !important;
         color: $crust !important;
       }
+    }
+
+    button[class*="leftTrayIcon-"][class*="buttonColor-"] {
+      background-color: $surface0;
+      color: $text;
     }
 
     [class*="colorable-"] {
