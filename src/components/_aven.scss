@@ -259,11 +259,18 @@ ul[class*="channelAttachmentArea-"] {
 }
 
 // Gradient discord logo
-svg[class^="homeIcon-"] {
-  color: rgb(17, 17, 27);
-}
-
 [class^="tutorialContainer-"] [class^="childWrapper-"] {
+  g#icon {
+    fill: $crust !important;
+    path:not(:first-child) {
+      display: none;
+    }
+  }
+
+  > svg g:not(#icon) rect {
+    display: none;
+  }
+
   background: linear-gradient(-45deg, $peach, $red, $sky, $green);
   animation: gradientBG 10s ease infinite;
   background-size: 400% 400%;
