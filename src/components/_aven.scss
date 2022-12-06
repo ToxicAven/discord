@@ -260,6 +260,10 @@ ul[class*="channelAttachmentArea-"] {
 
 // Gradient discord logo
 [class^="tutorialContainer-"] [class^="childWrapper-"] {
+  [class^="homeIcon-"] path {
+    fill: $crust !important;
+  }
+
   g#icon {
     fill: $crust !important;
     path:not(:first-child) {
