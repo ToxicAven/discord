@@ -15,7 +15,7 @@ div[class^="layerContainer"] [role="menu"] {
       }
     }
 
-    &[role="menuitem"]:not([class*="colorDanger"]):hover {
+    &[role="menuitem"]:not([class*="colorDanger"]):not([id*="user-context-user-volume"]):hover {
       background: var(--background-accent);
       color: $crust;
 
@@ -46,11 +46,19 @@ div[class^="layerContainer"] [role="menu"] {
   [class*="colorDanger"][class*="focused"],
   [class*="colorDefault"] [class*="check-"] {
     color: var(--background-floating);
+    background-color: $red;
   }
 
   #guild-header-popout-premium-subscribe {
     div[class^="iconContainer-"] > svg {
       color: $pink;
+    }
+  }
+
+  // user volume slider
+  #user-context-user-volume div[class*="slider-"] {
+    div[class*="bar-"] {
+      background-color: $surface0;
     }
   }
 }
@@ -59,7 +67,6 @@ div[class^="layerContainer"] [role="menu"] {
 .theme-light {
   div[class^="layerContainer"] div[id^="popout_"] > div[class*="didRender-"] {
     &:not([class^="animatorBottom-"]) > div {
-      background-color: var(--background-floating);
       div[class*="flowerStarContainer-"] {
         svg[class*="flowerStar-"] * {
           fill: $brand;
@@ -357,11 +364,12 @@ div[class*="userInfoSection-"] {
 // emoji reactions in call
 #emoji-picker-tab-panel,
 #sticker-picker-tab-panel {
-  --background-floating: #{$surface0};
+  /* --background-floating: #{$surface0};
 
   + div[class^="slotsContainer-"] {
     background-color: $surface0;
   }
+*/
 
   div[class^="tooltipContainer-"] {
     label[class^="label-"] {
