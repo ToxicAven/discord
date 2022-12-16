@@ -6,11 +6,6 @@ div[class^="newMemberBadge-"] {
   display: none;
 }
 
-// Make entire user about me visible
-[class*="lineClamp2Plus-"] {
-  -webkit-line-clamp: unset !important;
-}
-
 // Patch discords shitty status indicators update
 div[class*="status-"] {
   svg {
