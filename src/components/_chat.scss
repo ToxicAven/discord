@@ -1,4 +1,17 @@
 [class^="chatContent"] {
+  div[class*="wrapperAudio-"],
+  div[class*="imageWrapper-"] {
+    div[class*="audioControls"],
+    div[class*="videoControls-"] {
+      background-color: #{adjust-color($mantle, $alpha: -0.2)};
+
+      svg[class*="controlIcon-"] {
+        opacity: 1;
+        color: $subtext1;
+      }
+    }
+  }
+
   // new message ruler
   #---new-messages-bar {
     span[class^="unreadPill-"] {
@@ -66,6 +79,10 @@
         color: $crust;
       }
     }
+  }
+
+  span[class*="channelMention"]:hover {
+    color: $crust;
   }
 }
 
@@ -387,7 +404,7 @@ div[class*="chat-"] {
   }
 }
 
-div[class*="chat"] {
+div[class*="chat-"] {
   // Search Box
   section[class*="title"] div[class*="searchBar"] span[class*="search"] {
     background-color: $surface0;
@@ -399,5 +416,26 @@ div[class*="chat"] {
     div[class*="roundButton"][class*="activeButton"]
     span {
     color: $crust;
+  }
+}
+
+div[class*="chat-"] {
+  // Forum Gallery View
+  li[class*="mainCard-"][class*="container"] {
+    background-color: $surface0;
+
+    &:hover {
+      background-color: $surface1;
+    }
+  }
+
+  // Empty Pages
+  div[class*="emptyPage"] {
+    background-color: $base;
+  }
+
+  // Stupid gradient
+  div[class*="innerHeader"]:after {
+    background: none;
   }
 }
