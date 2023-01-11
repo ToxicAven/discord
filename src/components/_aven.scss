@@ -299,6 +299,18 @@ ul[class*="channelAttachmentArea-"] {
   border-radius: 8px;
 }
 
+// Centered emojis in user popouts
+div[class*="customStatusSection-"] [class*="customStatusSoloEmoji-"] {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+// Keep the gif favorites button on the right
+[class^="imageAccessory-"] {
+  left: unset;
+  right: 6px;
+}
+
 // Remove sticker suggestion popup (why discord why)
 [class*="container-"][class*="stickerIconOffset-"],
 section[class*="chatContent-"] form [class*="container-"] {
