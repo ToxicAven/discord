@@ -350,51 +350,51 @@ section[class*="chatContent-"] form [class*="container-"] {
 // Cool looking Jump to Present message button
 [class*="jumpToPresentBar"] {
   display: contents;
-}
 
-[class*="jumpToPresentBar"] > button:first-child {
-  display: none;
-}
+  > button:first-child {
+    display: none;
+  }
 
-[class*="jumpToPresentBar"] > button:last-child {
-  position: absolute;
-  bottom: 24px;
-  right: 22px;
-  padding: 8px !important;
-  height: auto;
-  background-color: var(--background-secondary);
-  border-radius: 100px;
-  display: flex;
-  font-size: 0;
-  color: transparent;
-  transition: font-size 150ms 0s, color 150ms 0s, padding 150ms 0s;
-}
+  > button:last-child {
+    position: absolute;
+    bottom: 24px;
+    right: 22px;
+    padding: 8px !important;
+    height: auto;
+    background-color: var(--background-secondary);
+    border-radius: 100px;
+    display: flex;
+    font-size: 0;
+    color: transparent;
+    transition: font-size 150ms 0s, color 150ms 0s, padding 150ms 0s;
+  }
 
-[class*="jumpToPresentBar"] > button svg {
-  order: -1;
-  margin: 0;
-  height: 24px;
-  width: 24px;
-  top: unset;
-  margin-right: 4px;
-  margin-left: 0;
-  margin-right: 0;
-  color: var(--text-normal);
-  transition: margin 150ms 0s;
-}
+  > button svg {
+    order: -1;
+    margin: 0;
+    height: 24px;
+    width: 24px;
+    top: unset;
+    margin-right: 4px;
+    margin-left: 0;
+    margin-right: 0;
+    color: var(--text-normal);
+    transition: margin 150ms 0s;
+  }
 
-[class*="jumpToPresentBar"]:hover > button {
-  padding: 8px 18px !important;
-  font-size: 14px;
-  color: var(--text-normal);
-  transition: font-size 150ms 1.1s, color 150ms 1.1s, padding 150ms 1.1s;
-  background-color: var(--background-tertiary);
-}
+  &:hover > button {
+    padding: 8px 18px !important;
+    font-size: 14px;
+    color: var(--text-normal);
+    transition: font-size 150ms 1.1s, color 150ms 1.1s, padding 150ms 1.1s;
+    background-color: var(--background-tertiary);
 
-[class*="jumpToPresentBar"]:hover > button svg {
-  margin-right: 2px;
-  margin-left: -6px;
-  transition: margin 150ms 1.1s;
+    svg {
+      margin-right: 2px;
+      margin-left: -6px;
+      transition: margin 150ms 1.1s;
+    }
+  }
 }
 
 // Show edit timestamps in the edited message
