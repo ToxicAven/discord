@@ -306,9 +306,11 @@ div#vc-spotify-player {
   }
 
   .vc-spotify-button-row {
+    position: relative !important;
     height: 0;
     opacity: 0;
     transition: height 0.2s, opacity 0.4s;
+    z-index: -1;
   }
 
   &:hover .vc-spotify-button-row {
