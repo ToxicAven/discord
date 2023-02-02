@@ -300,22 +300,30 @@ ul[class*="channelAttachmentArea-"] {
 }
 
 // Vencord spotify tweaks
-div#vc-spotify-player {
-  [class^="barFill-"] {
-    background: $brand;
+section[class^="panels-"] {
+  div#vc-spotify-player {
+    [class^="barFill-"] {
+      background: $brand;
+    }
+
+    .vc-spotify-button-row {
+      position: relative !important;
+      will-change: height;
+      height: 0;
+      opacity: 0;
+      transition: height 0.2s, opacity 0.4s, position 0s;
+    }
+
+    &:hover .vc-spotify-button-row {
+      position: flex !important;
+      height: 32px;
+      opacity: 1;
+    }
   }
 
-  .vc-spotify-button-row {
-    position: relative !important;
-    height: 0;
-    opacity: 0;
-    transition: height 0.2s, opacity 0.4s;
-    z-index: -1;
-  }
-
-  &:hover .vc-spotify-button-row {
-    height: 32px;
-    opacity: 1;
+  [class^="container-"] {
+    position: relative;
+    z-index: 1;
   }
 }
 
