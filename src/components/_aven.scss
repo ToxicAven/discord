@@ -299,6 +299,24 @@ ul[class*="channelAttachmentArea-"] {
   border-radius: 8px;
 }
 
+// Vencord spotify tweaks
+div#vc-spotify-player {
+  [class^="barFill-"] {
+    background: $brand;
+  }
+
+  .vc-spotify-button-row {
+    height: 0;
+    opacity: 0;
+    transition: height 0.2s, opacity 0.4s;
+  }
+
+  &:hover .vc-spotify-button-row {
+    height: 32px;
+    opacity: 1;
+  }
+}
+
 // Centered emojis in user popouts
 div[class*="customStatusSection-"] [class*="customStatusSoloEmoji-"] {
   margin-left: auto !important;
