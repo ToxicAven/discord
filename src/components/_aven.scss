@@ -308,6 +308,11 @@ section[class^="panels-"] {
     position: relative;
     z-index: 1;
   }
+
+  .vc-spotify-shuffle-off svg,
+  .vc-spotify-repeat-off svg {
+    fill: $surface1 !important;
+  }
 }
 
 // Make the video download button transparent
