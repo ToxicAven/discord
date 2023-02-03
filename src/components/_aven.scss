@@ -456,6 +456,11 @@ section[class*="chatContent-"] form [class*="container-"] {
   display: none;
 }
 
+// Add server and discovery buttons should use accent
+[class*="circleIconButton-"] svg > path {
+  fill: $brand !important;
+}
+
 // Remove the help button in the top right
 [class*="toolbar-"] [class*="anchor-"] {
   display: none;
