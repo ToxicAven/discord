@@ -1,11 +1,6 @@
 // Revert gg sans
 @import "font";
 
-// Remove snowsgiving button
-[class*="snowsgivingLink-"] {
-  display: none;
-}
-
 // Hide New member name badge
 div[class^="newMemberBadge-"] {
   display: none;
@@ -142,21 +137,20 @@ form [class^="channelTextArea"]::before {
 [class*="animatedContainer-"] {
   opacity: 1 !important;
   transition: opacity 0.5s;
-}
 
-[class*="animatedContainer-"] > [class*="bannerImage-"] {
-  transition: margin 0.5s;
+  > [class*="bannerImage-"] {
+    transition: margin 0.5s;
+  }
 }
 
 :not([class*="bannerVisible-"]) > [class*="animatedContainer-"] {
   opacity: 0.35 !important;
   height: 138px;
-}
 
-:not([class*="bannerVisible-"])
-  > [class*="animatedContainer-"]
+  &,
   > [class*="bannerImage-"] {
-  margin-top: -12px;
+    margin-top: -12px;
+  }
 }
 
 // Patch stupid resizing webm bug
@@ -327,6 +321,7 @@ section[class^="panels-"] {
     background: none;
   }
 }
+
 // Centered emojis in user popouts
 div[class*="customStatusSection-"] [class*="customStatusSoloEmoji-"] {
   margin-left: auto !important;
