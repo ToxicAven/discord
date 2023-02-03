@@ -327,6 +327,11 @@ section[class^="panels-"] {
   }
 }
 
+// Make the video download button transparent
+[class*="mediaAttachmentsContainer-"] [class*="hoverButtonGroup-"] {
+  background: none;
+}
+
 // Centered emojis in user popouts
 div[class*="customStatusSection-"] [class*="customStatusSoloEmoji-"] {
   margin-left: auto !important;
