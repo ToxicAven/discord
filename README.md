@@ -1,7 +1,7 @@
 <h3 align="center">
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-	Catppuccin for <a href="https://discord.com/">Discord</a>
+	Catppuccin for <a href="https://discord.com/">Discord</a> (Aven's fork)
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
 </h3>
 
@@ -52,19 +52,19 @@
 
 ```css
 /* latte */
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-latte.theme.css");
+@import url("https://toxicaven.dev/theme/catppuccin-latte.theme.css");
 /* frappe */
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-frappe.theme.css");
+@import url("https://toxicaven.dev/theme/catppuccin-frappe.theme.css");
 /* macchiato */
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-macchiato.theme.css");
+@import url("https://toxicaven.dev/theme/catppuccin-macchiato.theme.css");
 /* mocha */
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css");
+@import url("https://toxicaven.dev/theme/catppuccin-mocha.theme.css");
 
 /* You can also append Catppuccin colors to customize the accent, e.g. */
 /* mocha (pink accent)*/
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-pink.theme.css");
+@import url("https://toxicaven.dev/theme/catppuccin-mocha-pink.theme.css");
 /* frappe (maroon accent) */
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-frappe-maroon.theme.css");
+@import url("https://toxicaven.dev/theme/catppuccin-frappe-maroon.theme.css");
 ```
 
 ### [DiscoCSS](https://github.com/mlvzk/discocss)
@@ -74,25 +74,25 @@
 
 ```bash
 # latte
-curl -L https://catppuccin.github.io/discord/dist/catppuccin-latte.theme.css > ~/.config/discocss/custom.css
+curl -L https://toxicaven.dev/theme/catppuccin-latte.theme.css > ~/.config/discocss/custom.css
 # frappe
-curl -L https://catppuccin.github.io/discord/dist/catppuccin-frappe.theme.css > ~/.config/discocss/custom.css
+curl -L https://toxicaven.dev/theme/catppuccin-frappe.theme.css > ~/.config/discocss/custom.css
 # macchiato
-curl -L https://catppuccin.github.io/discord/dist/catppuccin-macchiato.theme.css > ~/.config/discocss/custom.css
+curl -L https://toxicaven.dev/theme/catppuccin-macchiato.theme.css > ~/.config/discocss/custom.css
 # mocha
-curl -L https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css > ~/.config/discocss/custom.css
+curl -L https://toxicaven.dev/theme/catppuccin-mocha.theme.css > ~/.config/discocss/custom.css
 
 # You can also append Catppuccin colors to customize the accent, e.g.
 # mocha (pink accent)
-curl -L https://catppuccin.github.io/discord/dist/catppuccin-mocha-pink.theme.css > ~/.config/discocss/custom.css
+curl -L https://toxicaven.dev/theme/catppuccin-mocha-pink.theme.css > ~/.config/discocss/custom.css
 # frappe (maroon accent)
-curl -L https://catppuccin.github.io/discord/dist/catppuccin-frappe-maroon.theme.css > ~/.config/discocss/custom.css
+curl -L https://toxicaven.dev/theme/catppuccin-frappe-maroon.theme.css > ~/.config/discocss/custom.css
 ```
 
 ### [Stylus](https://github.com/openstyles/stylus)
 
 1. Enable CSP Patching from Stylus Settings > Advanced.
-2. [Click here to install](https://github.com/catppuccin/discord/raw/main/discord.user.css)
+2. [Click here to install](https://github.com/ToxicAven/discord/raw/main/discord.user.css)
 3. Choose your preferred flavour and accent color from the Stylus preference dropdown.
 
 ## 🙋 FAQ

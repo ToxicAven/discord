@@ -10,5 +10,5 @@
 ==/UserStyle== */
 
 @-moz-document regexp("https?://(canary\\.|ptb\\.|)discord.com/.*") {
-    @import url("https://catppuccin.github.io/discord/dist/catppuccin-" + theme + "-" + accent + ".theme.css")
+    @import url("https://toxicaven.dev/theme/catppuccin-" + theme + "-" + accent + ".theme.css")
 }
