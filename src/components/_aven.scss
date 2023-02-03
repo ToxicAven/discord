@@ -458,6 +458,10 @@ section[class*="chatContent-"] form [class*="container-"] {
 // Jetbrains Mono codeblocks
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
+:root {
+  --font-code: "Jetbrains Mono";
+}
+
 [class^="markdown-"] [class^="codeInline-"],
 [class^="codeLine-"],
 [class^="codeBlockText-"],
@@ -469,5 +473,5 @@ section[class*="chatContent-"] form [class*="container-"] {
 code.inline,
 code,
 .hljs {
-  font-family: "Jetbrains Mono" !important;
+  font-family: var(--font-code) !important;
 }
