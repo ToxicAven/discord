@@ -103,8 +103,8 @@ curl -L https://toxicaven.dev/theme/catppuccin-frappe-maroon.theme.css > ~/.conf
 - A: Using the Latte theme requires Discord's light mode to be on. You can set it up to sync between e.g. Mocha in dark mode, and Latte in light mode with this snippet:
 
   ```css
-  @import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css") (prefers-color-scheme: dark);
-  @import url("https://catppuccin.github.io/discord/dist/catppuccin-latte.theme.css") (prefers-color-scheme: light);
+  @import url("https://toxicaven.dev/theme/catppuccin-mocha.theme.css") (prefers-color-scheme: dark);
+  @import url("https://toxicaven.dev/theme/catppuccin-latte.theme.css") (prefers-color-scheme: light);
   ```
 
 ## 💝 Thanks to
