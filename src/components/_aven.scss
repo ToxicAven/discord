@@ -486,7 +486,7 @@ section[class*="chatContent-"] form [class*="container-"] {
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
 :root {
-  --font-code: "Jetbrains Mono";
+  --code-font: "Jetbrains Mono";
 }
 
 [class^="markdown-"] [class^="codeInline-"],
@@ -500,5 +500,5 @@ section[class*="chatContent-"] form [class*="container-"] {
 code.inline,
 code,
 .hljs {
-  font-family: var(--font-code) !important;
+  font-family: var(--code-font), var(--font-code) !important;
 }
