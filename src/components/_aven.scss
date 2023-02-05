@@ -326,6 +326,29 @@ section[class^="panels-"] {
   }
 }
 
+// fix ugly audio/file containers
+[class*="messageAttachment-"] {
+  [class*="attachment-"][class*="newMosaicStyle-"] {
+    padding: 10px 20px !important;
+    width: fit-content;
+  }
+
+  [class*="wrapperAudio-"][class*="newMosaicStyle-"] {
+    padding: 10px 20px !important;
+    width: 250px;
+  }
+
+  [class*="hoverButtonGroup-"] {
+    /*
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    */
+    background: none;
+  }
+}
+
 // Centered emojis in user popouts
 div[class*="customStatusSection-"] [class*="customStatusSoloEmoji-"] {
   margin-left: auto !important;
