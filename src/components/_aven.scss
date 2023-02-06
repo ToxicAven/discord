@@ -153,7 +153,9 @@ form [class^="channelTextArea"]::before {
 }
 
 // Patch stupid resizing webm bug
-div:not([data-fullscreen="true"], [class*="media-engine-video"]):not([class^="image"])
+div:not([data-fullscreen="true"], [class*="media-engine-video"]):not(
+    [class^="image"]
+  )
   > video:not([class^="gif"]) {
   height: 300px !important;
 }
@@ -453,9 +455,11 @@ section[class*="chatContent-"] form [class*="container-"] {
 }
 
 // Show edit timestamps in the edited message
-
 span:not([class*="CompactTimeStamp-"])
-  [class*="timestamp-"]:not([class*="timestampInline-"], [class*="timestampVisibleOnHover-"])
+  [class*="timestamp-"]:not(
+    [class*="timestampInline-"],
+    [class*="timestampVisibleOnHover-"]
+  )
   time::after {
   content: " (" attr(aria-label) ")";
   color: var(--text-muted);
@@ -482,6 +486,11 @@ span:not([class*="CompactTimeStamp-"])
 // Remove the help button in the top right
 [class*="toolbar-"] [class*="anchor-"] {
   display: none;
+}
+
+// not matchy hljs codeblock background
+.hljs {
+  background-color: $mantle !important;
 }
 
 // Jetbrains Mono codeblocks
