@@ -454,11 +454,12 @@ section[class*="chatContent-"] form [class*="container-"] {
   }
 }
 
-// Show edit timestamps in the edited message
-span:not([class*="CompactTimeStamp-"])
-  [class*="timestamp-"]:not(
+// Show edit timestamps on edited messages
+div:not(.messagelogger-edited)
+  > [class*="timestamp-"]:not(
     [class*="timestampInline-"],
-    [class*="timestampVisibleOnHover-"]
+    [class*="timestampVisibleOnHover-"],
+    [class*="CompactTimeStamp-"]
   )
   time::after {
   content: " (" attr(aria-label) ")";
