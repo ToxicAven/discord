@@ -6,39 +6,9 @@ div[class^="newMemberBadge-"] {
   display: none;
 }
 
-// Patch discords shitty status indicators update
-div[class*="status-"] {
-  svg {
-    // Online + Phone
-    rect[fill="var(--status-rgba(0, 128, 0, 1)-600)"] {
-      fill: var(--status-green-600) !important;
-    }
-
-    // Idle
-    rect[fill="var(--status-rgba(255, 255, 0, 1)-500)"] {
-      fill: var(--status-yellow-500) !important;
-    }
-
-    // Do Not Disturb
-    rect[fill="var(--status-rgba(255, 0, 0, 1)-500)"] {
-      fill: var(--status-red-500) !important;
-    }
-
-    // Offline
-    rect[fill="var(--status-rgba(128, 128, 128, 1)-500)"] {
-      fill: var(--status-grey-500) !important;
-    }
-  }
-}
-
 // Get rid of thread suggestion bar
 div[class^="threadSuggestionBar-"] {
   display: none;
-}
-
-// Catppuccin: Background in call wrong if unfocused user bar is visible
-div[class^="callContainer-"] div[class*="tile"] {
-  background-color: $crust !important;
 }
 
 // Optional sleepy oneko on message box
