@@ -459,12 +459,17 @@ div:not(.messagelogger-edited)
   display: none;
 }
 
+// Catppuccin: call buttons
+div[class*="actions-"] button svg > path {
+  fill: $crust !important;
+}
+
 // not matchy hljs codeblock background
 .hljs {
   background-color: $mantle !important;
 }
 
-// Jetbrains Mono codeblocks
+// Custom font codeblocks
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
 :root {
