@@ -158,14 +158,15 @@ div[class*="rolesList"] {
   }
 }
 
-div[class^="layerContainer"] {
-  > div[class^="layer"] {
+div[class*="layerContainer"] {
+  > div[class*="layer"] {
     // reaction popout
     div[class^="reactors"] {
       background-color: var(--background-primary);
     }
 
-    div[class^="scroller"] {
+    // the not selector should make it not style the user popouts
+    div[class^="scroller"]:not([style*="padding-right: 4px;"]) {
       background-color: var(--background-secondary);
     }
 
@@ -176,6 +177,15 @@ div[class^="layerContainer"] {
 
     div[class*="reactionSelected"] {
       background-color: var(--background-modifier-selected);
+    }
+
+    // in DM -> select friends for group DM
+    div[class*="friendSelected"] {
+      background: $surface0 !important;
+    }
+
+    div[class*="header"] {
+      background: $mantle;
     }
   }
 }
@@ -306,6 +316,10 @@ div[class^="layerContainer"] {
 
         button[type="submit"] span {
           color: $crust;
+        }
+
+        [class*="footerText-"] {
+          color: $subtext1;
         }
       }
 
