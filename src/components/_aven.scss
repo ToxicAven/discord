@@ -445,7 +445,7 @@ div:not(.messagelogger-edited)
 }
 
 // Hide blocked messages
-[class^="groupStart-"] {
+[class|="groupStart"] > [class*="cozy"] {
   display: none;
 }
 
