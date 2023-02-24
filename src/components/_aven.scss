@@ -449,6 +449,35 @@ div:not(.messagelogger-edited)
   display: none;
 }
 
+// Revert Mosaic images
+/* Original code by Teltta#2064 */
+[class*="ByOneGrid-"]:not([class*="OneGridSingle-"]),
+[class*="ByTwoGrid-"],
+[class*="ByThreeGrid-"] {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+
+  [class*="lazyImg"] {
+    aspect-ratio: unset;
+    height: auto !important;
+    width: auto !important;
+    margin-left: 0px !important;
+  }
+}
+
+[class*="mediaAttachmentsContainer-"] {
+  border-radius: 0px;
+
+  [class*="messageAttachmentMediaMosaic-"] {
+    max-width: fit-content;
+  }
+}
+
+[class*="OneGridSingle-"] {
+  border-radius: 3px;
+}
+
 // Add server and discovery buttons should use accent
 [class*="circleIconButton-"] svg > path {
   fill: $brand !important;
