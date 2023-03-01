@@ -444,6 +444,11 @@ div:not(.messagelogger-edited)
   display: none;
 }
 
+// Revert mentions having a slightly bigger line width
+[class*="messageContent-"] .mention {
+  line-height: 1.2rem;
+}
+
 // Hide blocked messages
 [class|="groupStart"] > [class*="cozy"] {
   display: none;
