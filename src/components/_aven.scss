@@ -445,8 +445,11 @@ div:not(.messagelogger-edited)
 }
 
 // Revert mentions having a slightly bigger line width
-[class*="messageContent-"] .mention {
-  line-height: 1.2rem;
+[class*="messageContent-"] {
+  .mention,
+  .channelMention {
+    line-height: 1.2rem;
+  }
 }
 
 // Hide blocked messages
