@@ -43,33 +43,6 @@ form [class^="channelTextArea"]::before {
   display: none;
 }
 
-// Get rid of the custom nitro light mode themed popouts
-[class*="profileColors-"][class*="theme-light"] {
-  --profile-gradient-primary-color: unset !important;
-  --profile-gradient-secondary-color: unset !important;
-  --profile-gradient-button-color: unset !important;
-  --profile-gradient-overlay-color: unset !important;
-  --profile-body-background-color: unset !important;
-  --profile-body-background-hover: unset !important;
-  --profile-body-divider-color: unset !important;
-  --profile-avatar-border-color: unset !important;
-  --profile-message-input-border-color: unset !important;
-  --profile-note-background-color: unset !important;
-  --account-profile-popout-menu-hover: unset !important;
-  --profile-role-pill-background-color: unset !important;
-  --profile-role-pill-border-color: unset !important;
-
-  [class*="avatarHoverTarget-"] circle,
-  [class*="avatar-"] circle,
-  [class*="avatar-"] rect:not([class^="pointerEvents-"]) {
-    display: none;
-  }
-
-  [class*="rolePillBorder-"] {
-    border: 0;
-  }
-}
-
 // Better shrunken screen
 @media screen and (max-width: 1100px) {
   [class^="avatarWrapper-"] [class^="nameTag-"],
@@ -317,12 +290,6 @@ section[class^="panels-"] {
   }
 
   [class*="hoverButtonGroup-"] {
-    /*
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 1;
-    */
     background: none;
   }
 }
@@ -337,12 +304,6 @@ div[class*="customStatusSection-"] [class*="customStatusSoloEmoji-"] {
 [class^="imageAccessory-"] {
   left: unset;
   right: 6px;
-}
-
-// Remove sticker suggestion popup (why discord why)
-[class*="container-"][class*="stickerIconOffset-"],
-section[class*="chatContent-"] form [class*="container-"] {
-  display: none;
 }
 
 // Non-invasive connection problems modal
