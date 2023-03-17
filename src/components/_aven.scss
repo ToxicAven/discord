@@ -38,59 +38,65 @@ form [class^="channelTextArea"]::before {
 }
 
 // Various nitro cleanups
-[class*="userPopoutInner-"] > [class*="wrapper-"],
-[class^="premiumTier0Badge-"] {
+div[class^="userPopoutInner-"] > div[class^="wrapper-"],
+div[class^="premiumTier0Badge-"] {
   display: none;
 }
 
 // Better shrunken screen
 @media screen and (max-width: 1100px) {
-  [class^="avatarWrapper-"] [class^="nameTag-"],
-  [class^="panels-"] [class^="container-"] [class^="flex-"] [class^="inner-"],
-  [class*="membersWrap-"][class*="hiddenMembers-"] {
+  div[class^="avatarWrapper-"] div[class^="nameTag-"],
+  section[class^="panels-"]
+    div[class^="container-"]
+    div[class^="flex-"]
+    [class^="inner-"],
+  aside[class^="membersWrap-"][class*="hiddenMembers-"] {
     display: none;
   }
 
-  [class^="avatarWrapper-"] {
+  div[class^="avatarWrapper-"] {
     min-width: 0px;
   }
 
-  [class^="sidebar-"] {
+  div[class^="sidebar-"] {
     width: 20vw;
   }
 
-  [class^="panels-"] [class^="container-"] [class^="flex-"] {
+  div[class^="panels-"] div[class^="container-"] div[class^="flex-"] {
     justify-content: center;
     flex: 1 1 auto !important;
   }
 }
 
 // Remove spotify play button on the upload button
-[class^="attachButtonPlus-"] {
+path[class^="attachButtonPlus-"] {
   d: path(
     "M12 2.00098C6.486 2.00098 2 6.48698 2 12.001C2 17.515 6.486 22.001 12 22.001C17.514 22.001 22 17.515 22 12.001C22 6.48698 17.514 2.00098 12 2.00098ZM17 13.001H13V17.001H11V13.001H7V11.001H11V7.00098H13V11.001H17V13.001Z"
   );
 }
 
-[class^="attachButtonPlay-"] {
+path[class^="attachButtonPlay-"] {
   display: none;
 }
 
 // Collapsing sidebar header banner
-[class*="animatedContainer-"] {
+div[class^="animatedContainer-"] {
   opacity: 1 !important;
   transition: opacity 0.5s;
 
-  > [class*="bannerImage-"] {
+  > div[class^="bannerImage-"] {
     transition: margin 0.5s;
   }
 }
 
-:not([class*="bannerVisible-"]) > [class*="animatedContainer-"] {
+div[class^="sidebar-"]
+  nav[class^="container-"]
+  div[class^="container-"]:not(div[class*="bannerVisible-"])
+  > div[class^="animatedContainer-"] {
   opacity: 0.35 !important;
   height: 138px;
 
-  > [class*="bannerImage-"] {
+  > div[class^="bannerImage-"] {
     margin-top: -12px;
   }
 }
@@ -104,30 +110,30 @@ div:not([data-fullscreen="true"], [class*="media-engine-video"]):not(
 }
 
 // Shrink codeblocks to only be as wide as necessary
-[class^="markup-"] code {
+div[class^="markup-"] code {
   width: fit-content;
 }
 
 // Make members list fill all the way to the bottom of the screen
-[class*="membersWrap"] {
+div[class^="membersWrap"] {
   min-height: 100%;
 }
 
 // Remove 1st message sticker button in DMs
-[class*="containerExpanded-"] {
+div[class^="scrollerContent-"] div[class^="containerExpanded-"] {
   display: none;
 }
 
 // Remove Gift and Sticker buttons
 div[class^="channelTextArea-"] {
-  div[class^="buttons-"] > *:nth-child(1),
-  div[class^="buttons-"] > *:nth-child(3) {
+  div[class^="buttons-"] > button:nth-child(1),
+  div[class^="buttons-"] > div:nth-child(3) {
     display: none;
   }
 }
 
 // Rising file attachment animation
-ul[class*="channelAttachmentArea-"] {
+div[class^="scrollableContainer-"] ul[class^="channelAttachmentArea-"] {
   animation-name: attachmentAnimation;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
@@ -144,11 +150,11 @@ ul[class*="channelAttachmentArea-"] {
 }
 
 // Collapsible search bar
-[class*="title-"][class*="container-"]
-  [class*="toolbar-"]
-  [class*="search-"]
-  [class*="searchBar-"] {
-  [class*="iconContainer-"] {
+section[class^="title-"]
+  div[class^="toolbar-"]
+  div[class^="search-"]
+  div[class^="searchBar-"] {
+  div[class^="iconContainer-"] {
     width: 24px !important;
     height: 24px;
     cursor: pointer !important;
@@ -169,7 +175,10 @@ ul[class*="channelAttachmentArea-"] {
   padding: 0;
 }
 
-[class*="toolbar-"] [class*="open-"] [class*="searchBar-"] {
+section[class^="title-"]
+  div[class^="toolbar-"]
+  div[class*="open-"]
+  div[class^="searchBar-"] {
   width: 300px !important;
   padding: 0 10px !important;
 
@@ -180,14 +189,14 @@ ul[class*="channelAttachmentArea-"] {
 }
 
 // Force emoji picker icon to be :pleading_face:
-[class^="sprite-"],
-[class^="sprite-"]:hover {
+div[class^="sprite-"],
+div[class^="sprite-"]:hover {
   background-position: -66px -88px !important;
 }
 
 // Gradient discord logo
-[class^="tutorialContainer-"] [class^="childWrapper-"] {
-  [class^="homeIcon-"] path {
+div[class^="tutorialContainer-"] div[class^="childWrapper-"] {
+  svg[class^="homeIcon-"] path {
     fill: $crust !important;
   }
 
@@ -223,18 +232,20 @@ ul[class*="channelAttachmentArea-"] {
 }
 
 // Round spotify album covers
-[class*="assetsLargeImageSpotify-"] {
+div[class^="userPopoutInner-"]
+  div[class^="activityUserPopoutV2-"]
+  img[class*="assetsLargeImageSpotify-"] {
   border-radius: 8px;
 }
 
 // Vencord spotify tweaks
 section[class^="panels-"] {
   div#vc-spotify-player {
-    [class^="barFill-"] {
+    div[class^="barFill-"] {
       background: $brand;
     }
 
-    .vc-spotify-button-row {
+    div.vc-spotify-button-row {
       position: relative !important;
       will-change: height;
       height: 0;
@@ -242,66 +253,70 @@ section[class^="panels-"] {
       transition: height 0.2s, opacity 0.4s, position 0s;
     }
 
-    &:hover .vc-spotify-button-row {
+    &:hover div.vc-spotify-button-row {
       position: flex !important;
       height: 32px;
       opacity: 1;
     }
   }
 
-  [class^="container-"] {
+  div[class^="container-"] {
     position: relative;
     z-index: 1;
   }
 
-  .vc-spotify-shuffle-off svg,
-  .vc-spotify-repeat-off svg {
+  button.vc-spotify-shuffle-off svg,
+  button.vc-spotify-repeat-off svg {
     fill: $surface1 !important;
   }
 }
 
 // Vencord Message logger color
-.messagelogger-red-text .messagelogger-deleted div {
+li.messagelogger-deleted div {
   color: $red !important;
 }
 
 // Make the video download button transparent
-[class*="mediaAttachmentsContainer-"] {
+div[class^="mediaAttachmentsContainer-"] {
   &,
-  [class*="oneByOneGridSingle-"] {
+  div[class*="oneByOneGridSingle-"] {
     border-radius: 2px;
   }
 
-  [class*="hoverButtonGroup-"] {
+  div[class^="hoverButtonGroup-"] {
     background: none;
   }
 }
 
 // fix ugly audio/file containers
-[class*="messageAttachment-"] {
-  [class*="attachment-"][class*="newMosaicStyle-"] {
+div[class^="messageAttachment-"] {
+  div[class^="attachment-"][class*="newMosaicStyle-"] {
     padding: 10px 20px !important;
     width: fit-content;
   }
 
-  [class*="wrapperAudio-"][class*="newMosaicStyle-"] {
+  div[class^="wrapperAudio-"][class*="newMosaicStyle-"] {
     padding: 10px 20px !important;
     width: 250px;
   }
 
-  [class*="hoverButtonGroup-"] {
+  div[class^="hoverButtonGroup-"] {
     background: none;
   }
 }
 
 // Centered emojis in user popouts
-div[class*="customStatusSection-"] [class*="customStatusSoloEmoji-"] {
+div[class^="userPopoutInner-"]
+  div[class*="customStatusSection-"]
+  img[class*="customStatusSoloEmoji-"] {
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
 // Keep the gif favorites button on the right
-[class^="imageAccessory-"] {
+div[class^="message-"]
+  div[class^="imageContainer-"]
+  div[class^="imageAccessory-"] {
   left: unset;
   right: 6px;
 }
@@ -522,35 +537,37 @@ div[class*="customStatusSection-"] [class*="customStatusSoloEmoji-"] {
 }
 
 // Show edit timestamps on edited messages
-div:not(.messagelogger-edited)
-  > [class*="timestamp-"]:not(
-    [class*="timestampInline-"],
-    [class*="timestampVisibleOnHover-"],
-    [class*="CompactTimeStamp-"]
-  )
-  time::after {
-  content: " (" attr(aria-label) ")";
-  color: var(--text-muted);
-  font-size: 0.625rem;
-  font-weight: 400;
-  line-height: 1;
-  text-transform: lowercase;
-}
+[class^="message-"] [class^="contents-"] {
+  div:not(div.messagelogger-edited)
+    > span[class*="timestamp-"]:not(
+      [class*="timestampInline-"],
+      [class*="timestampVisibleOnHover-"],
+      [class*="CompactTimeStamp-"]
+    )
+    time::after {
+    content: " (" attr(aria-label) ")";
+    color: var(--text-muted);
+    font-size: 0.625rem;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: lowercase;
+  }
 
-[class*="edited-"] {
-  display: none;
+  span[class^="edited-"] {
+    display: none;
+  }
 }
 
 // Revert mentions having a slightly bigger line width
-[class*="messageContent-"] {
-  .mention,
-  .channelMention {
+div[class^="message-"] div[class^="contents"] [class*="messageContent-"] {
+  span.mention,
+  span.channelMention {
     line-height: 1.2rem;
   }
 }
 
 // Hide blocked messages
-[class|="groupStart"] > [class*="cozy"] {
+div[class|="groupStart"] > div[class*="cozy"] {
   display: none;
 }
 
@@ -584,12 +601,16 @@ div:not(.messagelogger-edited)
 }
 
 // Add server and discovery buttons should use accent
-[class*="circleIconButton-"] svg > path {
+ul[class^="tree-"]
+  div[class^="scroller"]
+  div[class^="circleIconButton-"]
+  svg
+  > path {
   fill: $brand !important;
 }
 
 // Remove the help button in the top right
-[class*="toolbar-"] [class*="anchor-"] {
+section[class^="title-"] div[class^="toolbar-"] a[class^="anchor-"] {
   display: none;
 }
 
