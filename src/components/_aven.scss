@@ -2,17 +2,22 @@
 @import "font";
 
 // Hide New member name badge
-div[class^="newMemberBadge-"] {
+div[class^="message-"] div[class^="contents-"] div[class^="newMemberBadge-"] {
   display: none;
 }
 
 // Get rid of thread suggestion bar
-div[class^="threadSuggestionBar-"] {
+main[class^="chatContent-"]
+  form[class^="form-"]
+  div[class^="channelTextArea"]
+  div[class^="threadSuggestionBar-"] {
   display: none;
 }
 
 // Optional sleepy oneko on message box
-form [class^="channelTextArea"]::before {
+main[class^="chatContent-"]
+  form[class^="form-"]
+  div[class^="channelTextArea"]::before {
   display: none;
   content: "";
   width: 32px;
@@ -69,35 +74,37 @@ div[class^="premiumTier0Badge-"] {
 }
 
 // Remove spotify play button on the upload button
-path[class^="attachButtonPlus-"] {
-  d: path(
-    "M12 2.00098C6.486 2.00098 2 6.48698 2 12.001C2 17.515 6.486 22.001 12 22.001C17.514 22.001 22 17.515 22 12.001C22 6.48698 17.514 2.00098 12 2.00098ZM17 13.001H13V17.001H11V13.001H7V11.001H11V7.00098H13V11.001H17V13.001Z"
-  );
-}
+main[class^="chatContent-"] form[class^="form-"] div[class^="channelTextArea"] {
+  path[class^="attachButtonPlus-"] {
+    d: path(
+      "M12 2.00098C6.486 2.00098 2 6.48698 2 12.001C2 17.515 6.486 22.001 12 22.001C17.514 22.001 22 17.515 22 12.001C22 6.48698 17.514 2.00098 12 2.00098ZM17 13.001H13V17.001H11V13.001H7V11.001H11V7.00098H13V11.001H17V13.001Z"
+    );
+  }
 
-path[class^="attachButtonPlay-"] {
-  display: none;
-}
-
-// Collapsing sidebar header banner
-div[class^="animatedContainer-"] {
-  opacity: 1 !important;
-  transition: opacity 0.5s;
-
-  > div[class^="bannerImage-"] {
-    transition: margin 0.5s;
+  path[class^="attachButtonPlay-"] {
+    display: none;
   }
 }
 
-div[class^="sidebar-"]
-  nav[class^="container-"]
-  div[class^="container-"]:not(div[class*="bannerVisible-"])
-  > div[class^="animatedContainer-"] {
-  opacity: 0.35 !important;
-  height: 138px;
+// Collapsing sidebar header banner
+div[class^="sidebar-"] nav[class^="container-"] {
+  div[class^="animatedContainer-"] {
+    opacity: 1 !important;
+    transition: opacity 0.5s;
 
-  > div[class^="bannerImage-"] {
-    margin-top: -12px;
+    > div[class^="bannerImage-"] {
+      transition: margin 0.5s;
+    }
+  }
+
+  div[class^="container-"]:not(div[class*="bannerVisible-"])
+    > div[class^="animatedContainer-"] {
+    opacity: 0.35 !important;
+    height: 138px;
+
+    > div[class^="bannerImage-"] {
+      margin-top: -12px;
+    }
   }
 }
 
@@ -464,7 +471,7 @@ div[class^="message-"]
       }
     }
 
-    [class*="barInner-3dHef4"] {
+    [class*="barInner-"] {
       background-color: var(--profile-body-background-color);
     }
   }
