@@ -190,7 +190,9 @@ section[class^="title-"]
 // Force emoji picker icon to be :pleading_face:
 div[class^="sprite-"],
 div[class^="sprite-"]:hover {
-  background-position: -66px -88px !important;
+  background: url("https://toxicaven.dev/pleading.svg") no-repeat;
+  background-position: unset !important;
+  background-size: unset !important;
 }
 
 // Gradient discord logo
@@ -482,6 +484,44 @@ div[class^="message-"]
 
   [class*="headerText-"] {
     --header-primary: $base;
+  }
+}
+
+// Revert pleading face
+/* Credit to Niko's trans UK flag code :3 https://github.com/XWasHere/sane-discord/ */
+[class^="inspector-"] img[alt="\:pleading_face\:"],
+[data-type="emoji"]:is(
+    [data-name="\:pleading_face\:"],
+    [data-name="pleading_face"]
+  ) {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("https://toxicaven.dev/pleading.svg") no-repeat;
+
+  width: 1.375em;
+  height: 1.375em;
+  padding-left: 1.375em;
+
+  &:is(img) {
+    width: 22px;
+    height: 22px;
+    padding-left: 22px;
+  }
+
+  &.jumboable {
+    width: 3rem;
+    height: 3rem;
+    padding-left: 3rem;
+  }
+
+  &[class*="emojiItemMedium-"] {
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+  }
+
+  div[class^="emojiSpriteImage"] {
+    display: none;
   }
 }
 
