@@ -652,6 +652,13 @@ ul[class^="tree-"]
   fill: $brand !important;
 }
 
+// File upload progress should use accent
+div[class^="attachment"]
+  div[class^="progressContainer"]
+  div[class^="progressBar"] {
+  background-color: $brand !important;
+}
+
 // Remove the help button in the top right
 section[class^="title-"] div[class^="toolbar-"] a[class^="anchor-"] {
   display: none;
