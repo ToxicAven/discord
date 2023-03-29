@@ -525,6 +525,10 @@ div[class^="message-"]
   }
 }
 
+img[src="/assets/e63c47fd56c7ed1e4552974baaef4b4e.svg"] {
+  content: url("https://toxicaven.dev/pleading.svg") !important;
+}
+
 // Cool looking Jump to Present message button
 [class*="jumpToPresentBar"] {
   display: contents;
