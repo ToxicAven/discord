@@ -2,7 +2,7 @@
 @import "font";
 
 // Hide New member name badge
-div[class^="message-"] div[class^="contents-"] div[class^="newMemberBadge-"] {
+div[class^="newMemberBadge-"] {
   display: none;
 }
 
