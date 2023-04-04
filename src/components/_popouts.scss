@@ -195,6 +195,11 @@ section[class^="positionContainer-"] {
   }
 }
 
+// Latte text color on gif categories
+.theme-light section[class^="positionContainer-"] div[class^="categoryText-"] {
+  color: $base;
+}
+
 #emoji-picker-tab-panel {
   // more transparent to make things more bearable
   [class*="stickerInspected-"] [class*="inspectedIndicator"],
