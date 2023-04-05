@@ -48,6 +48,18 @@ div[class^="premiumTier0Badge-"] {
   display: none;
 }
 
+/* Aven's profile easter egg */
+div[class^="layerContainer-"]
+  div[aria-label="ToxicAven"]
+  div[class^="userTagWithNickname-"]::after {
+  content: " • Thanks for using my theme!";
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Whitney, "gg sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  color: var(--header-secondary);
+}
+
 // Better shrunken screen
 @media screen and (max-width: 1100px) {
   div[class^="avatarWrapper-"] div[class^="nameTag-"],
