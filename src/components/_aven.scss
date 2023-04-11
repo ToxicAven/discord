@@ -244,6 +244,11 @@ div[class^="tutorialContainer-"] div[class^="childWrapper-"] {
   }
 }
 
+// Don't cut off about me section
+[class|="userPopoutInner"] [style*="-webkit-line-clamp"] {
+  -webkit-line-clamp: unset !important;
+}
+
 // Round spotify album covers
 div[class^="userPopoutInner-"]
   div[class^="activityUserPopoutV2-"]
