@@ -294,6 +294,21 @@ section[class^="panels-"] {
   color: $crust;
 }
 
+// Fix markdown margins
+[class*="markup-"] {
+  h1 {
+    margin: 25px 0 7px;
+  }
+
+  h2 {
+    margin: 20px 0 7px;
+  }
+
+  li {
+    margin: 0;
+  }
+}
+
 // Make the video download button transparent
 div[class^="mediaAttachmentsContainer-"] {
   &,
