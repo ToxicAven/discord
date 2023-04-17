@@ -43,6 +43,36 @@
       }
     }
   }
+    // Super reactions and beta badge
+  div[class*="isBurstReactionPicker-"] {
+    box-shadow: 0 0 0 2px $mauve,0 0 16px $lavender;
+  }
+  div[class^="navButtonSuperReactActive-"],div[class^="navButtonSuperReactActive-"]:hover {
+    background: linear-gradient(270deg,$pink,$lavender 33.63%,$mauve);
+    color: $crust;
+  }
+  div[class*="betaTag-"]{
+    background: var(--brand-experiment) !important;
+    color: $crust;
+  }
+  button[class*="navButtonActive-"],button[class*="navButtonActive-"]:hover{
+    color: $crust;
+  }  
+  div[class*="colorPremiumGradient-"][class*="focused-"]{
+    background: linear-gradient(270deg,$pink,$lavender 33.63%,$mauve);
+    color: $crust !important;
+  }
+  div[class*="isBurstReactionPicker"]{
+    border: none;
+    box-shadow: 0 0 0 2px $mauve,0 0 16px $lavender;
+  }
+  // Voice messages play button
+  div[class*="playButtonContainer-"]{
+    background: var(--brand-experiment) !important;
+  }
+  svg[class*="playIcon-"] path{
+    fill: $crust;
+  }
 
   // chat header
   div[class^="container-"][class*="header-"] {
@@ -470,4 +500,13 @@ div[class*="chat-"] {
   [class*="partyStatus-"] {
     color: $text;
   }
+}
+
+// Vencord's deleted message plugin
+.messagelogger-deleted div {
+  color: $red !important;
+}
+.messagelogger-deleted.messagelogger-deleted.messagelogger-deleted a {
+    color: #{darken($red, 5%)};
+    text-decoration: underline;
 }
