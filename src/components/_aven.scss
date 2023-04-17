@@ -284,9 +284,9 @@ section[class^="panels-"] {
   }
 }
 
-// Vencord Message logger color
-li.messagelogger-deleted div {
-  color: $red !important;
+// Typing indicators
+[class|="dots"] {
+  color: $crust;
 }
 
 // Make the video download button transparent
