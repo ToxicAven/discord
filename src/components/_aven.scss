@@ -284,6 +284,11 @@ section[class^="panels-"] {
   }
 }
 
+// Vencord themes box should use accent
+#vencordthemes-tab [class*="input-"]:focus {
+  border-color: $brand !important;
+}
+
 // Typing indicators
 [class|="dots"] {
   color: $crust;
