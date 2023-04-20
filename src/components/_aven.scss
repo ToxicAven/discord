@@ -338,6 +338,55 @@ div[class^="messageAttachment-"] {
   }
 }
 
+// Mac os style window buttons for windows
+/*TSTOP*/
+[class^="typeWindows-"] {
+  &[class*="withFrame-"] {
+    height: 20px;
+  }
+
+  [class*="winButton-"] {
+    top: 0;
+    width: 12px;
+    height: 12px;
+    margin: 2px 12px 0px 0px;
+    border-radius: 12px;
+
+    > svg {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      height: 12px;
+      width: 12px;
+      border-radius: 12px;
+    }
+  }
+
+  [class*="winButtonClose-"]::after {
+    background-color: #f38ba8 !important;
+  }
+
+  [class*="winButtonMinMax-"] {
+    &:nth-child(3)::after {
+      background-color: #a6e3a1 !important;
+    }
+
+    &:nth-child(4)::after {
+      background-color: #f9e2af !important;
+    }
+  }
+
+  > div:hover::after {
+    transform: scale(1.1);
+  }
+
+  > div:active::after {
+    transform: scale(1);
+  }
+}
+
 // Centered emojis in user popouts
 div[class^="userPopoutInner-"]
   div[class*="customStatusSection-"]
