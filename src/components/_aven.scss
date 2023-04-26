@@ -143,6 +143,11 @@ div[class^="channelTextArea-"] {
   }
 }
 
+// Reshrink new messages bar
+[class|="chatContent"] [class|="newMessagesBar"] {
+  height: 16px;
+}
+
 // Rising file attachment animation
 div[class^="scrollableContainer-"] ul[class^="channelAttachmentArea-"] {
   animation-name: attachmentAnimation;
