@@ -606,7 +606,7 @@ div[class|="message"]
     margin: 4px;
   }
 
-  div[class="emojiSpriteImage"] {
+  div[class|="emojiSpriteImage"] {
     display: none;
   }
 }
