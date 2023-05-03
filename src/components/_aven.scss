@@ -85,7 +85,7 @@ div[class|="layerContainer"]
   }
 }
 
-// if $type is found in head classes
+// Alert user if they are using the wrond discord theme coloring
 html:not(#{$type}) [class|="title"] [class|="titleWrapper"] h1::after {
   @if #{$type} == ".theme-dark" {
     content: " USE DARK THEME";
