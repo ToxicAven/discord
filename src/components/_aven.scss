@@ -85,6 +85,30 @@ div[class|="layerContainer"]
   }
 }
 
+// if $type is found in head classes
+html:not(#{$type}) [class|="title"] [class|="titleWrapper"] h1::after {
+  @if #{$type} == ".theme-dark" {
+    content: " USE DARK THEME";
+  } @else {
+    content: " USE LIGHT THEME";
+  }
+  padding-left: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Whitney, "gg sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  animation: warningBlink 1s infinite;
+}
+
+@keyframes warningBlink {
+  from {
+    color: $red;
+  }
+  to {
+    color: $text;
+  }
+}
+
 // Remove spotify play button on the upload button
 main[class|="chatContent"] form[class|="form"] div[class|="channelTextArea"] {
   path[class|="attachButtonPlus"] {

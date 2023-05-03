@@ -12,6 +12,7 @@
 @use "@catppuccin/palette/scss/mocha" as *;
 
 $brand: $blue;
+$type: ".theme-dark";
 
 button[class*="emojiButtonNormal"] > div > div {
   filter: grayscale(0.77) hue-rotate(185deg) brightness(1.02) opacity(100%) !important;
