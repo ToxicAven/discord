@@ -122,6 +122,36 @@ main[class|="chatContent"] form[class|="form"] div[class|="channelTextArea"] {
   }
 }
 
+// Roll pill inherits color from role circle
+[class|="role"] {
+  transform: translate(0);
+  overflow: hidden;
+  border: 0;
+  border-radius: 5px;
+
+  [class|="roleRemoveIcon"] {
+    margin: 0;
+    left: unset;
+    transform: translate(50%, -50%);
+  }
+
+  [class|="roleRemoveButton"] {
+    position: static;
+  }
+
+  [class|="roleCircle"]:after {
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    opacity: 0.3;
+  }
+}
+
 // Collapsing sidebar header banner
 div[class|="sidebar"] nav[class|="container"] {
   div[class|="animatedContainer"] {
@@ -368,7 +398,6 @@ div[class|="messageAttachment"] {
 }
 
 // Mac os style window buttons for windows
-/*TSTOP*/
 [class|="typeWindows"] {
   &[class*="withFrame-"] {
     height: 20px;
@@ -490,7 +519,6 @@ div[class|="message"]
     color: #{$text};
   }
 
-  // Waves are back :D
   [class*="headerTextNormal-"]::before {
     content: "";
     position: absolute;
@@ -517,7 +545,6 @@ div[class|="message"]
     }
   }
 
-  // Playing
   &::before {
     content: "";
     position: absolute;
@@ -545,7 +572,6 @@ div[class|="message"]
     opacity: 1;
   }
 
-  // Spotify
   [class*="timeBarUserPopoutV2-"] {
     &::before {
       content: "";
