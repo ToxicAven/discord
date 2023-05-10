@@ -49,6 +49,17 @@ div[class|="notice"][class*="colorPremium-"] {
   display: none;
 }
 
+// Fix menu carets
+div[class|="menu"] {
+  div[class*="colorPremiumGradient-"] svg[class|="icon"] {
+    display: none;
+  }
+
+  svg[class|="caret"] {
+    transform: scale(1.75);
+    padding-left: 0.2rem;
+  }
+}
 /* Aven's profile easter egg */
 div[class|="layerContainer"]
   div[aria-label="ToxicAven"]
