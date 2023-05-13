@@ -823,6 +823,11 @@ div[class|="attachment"]
   background-color: $brand !important;
 }
 
+// Message reply bar ping toggle should use accent
+div[class|="replyBar"] div[aria-checked="true"] div {
+  color: $brand !important;
+}
+
 // Remove the help button in the top right
 section[class|="title"] div[class|="toolbar"] a[class|="anchor"] {
   display: none;
