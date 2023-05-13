@@ -60,6 +60,17 @@ div[class|="menu"] {
     padding-left: 0.2rem;
   }
 }
+
+// Theme info in client version area
+nav[class|="sidebar"] div[class|="info"]::before {
+  content: "Catppuccin Aven " + $version;
+  color: $subtext0;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: var(--font-primary);
+  font-weight: 400;
+}
+
 /* Aven's profile easter egg */
 div[class|="layerContainer"]
   div[aria-label="ToxicAven"]

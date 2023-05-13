@@ -1,5 +1,6 @@
 const fs = require("fs").promises;
 const path = require("path");
+const { execSync } = require("child_process");
 
 const sourceFiles = [
   "src/catppuccin-frappe.theme.scss",
@@ -25,6 +26,8 @@ const accents = [
   "lavender",
 ];
 
+const version = execSync("git rev-parse --short HEAD").toString().trim();
+
 (async () => {
   await Promise.all(sourceFiles.map(generateAccents));
   console.log("Generated all accents for all flavours");
@@ -45,10 +48,9 @@ async function generateAccents(sourceFilePath) {
 
 // replace brand and write to separate file
 async function generateAccent(sourceFileData, sourceFilePath, accent) {
-  const modifiedFileContent = sourceFileData.replace(
-    /\$brand: .*;/gm,
-    `$brand: \$${accent};`
-  );
+  const modifiedFileContent = sourceFileData
+    .replace(/\$brand: .*;/gm, `$brand: \$${accent};`)
+    .replace(/\$version: .*;/gm, `$version: "(${version})";`);
   const outputFileName = sourceFilePath
     .split(".")
     .map((s, i) => (i === 0 ? s.concat(`-${accent}`) : s))
