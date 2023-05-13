@@ -778,6 +778,13 @@ div[class|="groupStart"] > div[class*="cozy"] {
   display: none;
 }
 
+// remove user popout AKA section
+div[class|="userPopoutOuter"]
+  div[class*="usernameSection-"]
+  div[class|="container"] {
+  display: none;
+}
+
 // Revert Mosaic images
 /* Original code by Teltta#2064 */
 [class*="ByOneGrid-"]:not([class*="OneGridSingle-"]),
