@@ -109,18 +109,23 @@ div[class|="layerContainer"]
 }
 
 // Alert user if they are using the wrond discord theme coloring
-html:not(#{$type}) [class|="title"] [class|="titleWrapper"] h1::after {
-  @if #{$type} == ".theme-dark" {
-    content: " USE DARK THEME";
-  } @else {
-    content: " USE LIGHT THEME";
+html:not(#{$type}) {
+  [class|="title"] [class|="titleWrapper"] h1::after {
+    @if #{$type} == ".theme-dark" {
+      content: " USE DARK THEME";
+    } @else {
+      content: " USE LIGHT THEME";
+    }
+    padding-left: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Whitney, "gg sans", "Helvetica Neue", Helvetica, Arial,
+      sans-serif;
+    color: $red;
   }
-  padding-left: 4px;
-  font-size: 16px;
-  font-weight: 500;
-  font-family: Whitney, "gg sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  animation: warningBlink 1s infinite;
+  &:not(.reduce-motion) [class|="title"] [class|="titleWrapper"] h1::after {
+    animation: warningBlink 1s infinite;
+  }
 }
 
 @keyframes warningBlink {
@@ -176,23 +181,25 @@ main[class|="chatContent"] form[class|="form"] div[class|="channelTextArea"] {
 }
 
 // Collapsing sidebar header banner
-div[class|="sidebar"] nav[class|="container"] {
-  div[class|="animatedContainer"] {
-    opacity: 1 !important;
-    transition: opacity 0.5s;
+html:not(.reduce-motion) {
+  div[class|="sidebar"] nav[class|="container"] {
+    div[class|="animatedContainer"] {
+      opacity: 1 !important;
+      transition: opacity 0.5s;
 
-    > div[class|="bannerImage"] {
-      transition: margin 0.5s;
+      > div[class|="bannerImage"] {
+        transition: margin 0.5s;
+      }
     }
-  }
 
-  div[class|="container"]:not(div[class*="bannerVisible-"])
-    > div[class|="animatedContainer"] {
-    opacity: 0.35 !important;
-    height: 138px;
+    div[class|="container"]:not(div[class*="bannerVisible-"])
+      > div[class|="animatedContainer"] {
+      opacity: 0.35 !important;
+      height: 138px;
 
-    > div[class|="bannerImage"] {
-      margin-top: -12px;
+      > div[class|="bannerImage"] {
+        margin-top: -12px;
+      }
     }
   }
 }
@@ -226,7 +233,10 @@ div[class|="channelTextArea"] {
 }
 
 // Rising file attachment animation
-div[class|="scrollableContainer"] ul[class|="channelAttachmentArea"] {
+
+html:not(.reduce-motion)
+  div[class|="scrollableContainer"]
+  ul[class|="channelAttachmentArea"] {
   animation-name: attachmentAnimation;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
@@ -243,41 +253,43 @@ div[class|="scrollableContainer"] ul[class|="channelAttachmentArea"] {
 }
 
 // Collapsible search bar
-section[class|="title"]
-  div[class|="toolbar"]
-  div[class|="search"]
-  div[class|="searchBar"] {
-  div[class|="iconContainer"] {
-    width: 24px !important;
-    height: 24px;
-    cursor: pointer !important;
-  }
+html:not(.reduce-motion) {
+  section[class|="title"]
+    div[class|="toolbar"]
+    div[class|="search"]
+    div[class|="searchBar"] {
+    div[class|="iconContainer"] {
+      width: 24px !important;
+      height: 24px;
+      cursor: pointer !important;
+    }
 
-  &,
-  svg {
-    color: var(--color-text);
+    &,
+    svg {
+      color: var(--color-text);
+      width: 24px;
+      height: 24px;
+      padding: 0.5px;
+    }
+
+    background: none !important;
     width: 24px;
-    height: 24px;
-    padding: 0.5px;
+    color: var(--color-text);
+    transition: width 0.2s, padding 0.5s;
+    padding: 0;
   }
 
-  background: none !important;
-  width: 24px;
-  color: var(--color-text);
-  transition: width 0.2s, padding 0.5s;
-  padding: 0;
-}
+  section[class|="title"]
+    div[class|="toolbar"]
+    div[class*="open-"]
+    div[class|="searchBar"] {
+    width: 300px !important;
+    padding: 0 10px !important;
 
-section[class|="title"]
-  div[class|="toolbar"]
-  div[class*="open-"]
-  div[class|="searchBar"] {
-  width: 300px !important;
-  padding: 0 10px !important;
-
-  svg {
-    color: var(--text-muted);
-    transform: scale(0.8);
+    svg {
+      color: var(--text-muted);
+      transform: scale(0.8);
+    }
   }
 }
 
@@ -308,8 +320,13 @@ div[class|="tutorialContainer"] div[class|="childWrapper"] {
   }
 
   background: linear-gradient(-45deg, $peach, $red, $sky, $green);
-  animation: gradientBG 10s ease infinite;
   background-size: 400% 400%;
+}
+
+html:not(.reduce-motion)
+  div[class|="tutorialContainer"]
+  div[class|="childWrapper"] {
+  animation: gradientBG 10s ease infinite;
 }
 
 @keyframes gradientBG {
@@ -521,7 +538,7 @@ div[class|="message"]
 
 // Wavy spotify
 /* Credit to https://github.com/Comfy-Themes/Discord */
-[class*="userPopoutOuter-"] [class*="activity-"] {
+html:not(.reduce-motion) [class*="userPopoutOuter-"] [class*="activity-"] {
   --wave-width: 284px;
   padding: 16px;
   margin-top: 25px;
@@ -694,7 +711,7 @@ img[src="/assets/e63c47fd56c7ed1e4552974baaef4b4e.svg"] {
 }
 
 // Cool looking Jump to Present message button
-[class*="jumpToPresentBar"] {
+html:not(.reduce-motion) [class*="jumpToPresentBar"] {
   display: contents;
 
   > button:first-child {
