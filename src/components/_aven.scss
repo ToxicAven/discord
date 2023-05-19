@@ -493,6 +493,15 @@ div[class|="userPopoutInner"]
   margin-right: auto !important;
 }
 
+// remove AI Channel emojis
+div[class|="channelEmoji"] {
+  display: none;
+}
+
+div[class*="channelName-"] {
+  padding: 2px;
+}
+
 // Keep the gif favorites button on the right
 div[class|="message"]
   div[class|="imageContainer"]
