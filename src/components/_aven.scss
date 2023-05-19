@@ -498,6 +498,14 @@ div[class|="channelEmoji"] {
   display: none;
 }
 
+// remove Nitro and Discord Birthday tag
+nav[class|="privateChannels"] {
+  :nth-child(3),
+  :nth-child(4) {
+    display: none;
+  }
+}
+
 // Keep the gif favorites button on the right
 div[class|="message"]
   div[class|="imageContainer"]
