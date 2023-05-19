@@ -85,7 +85,7 @@ div[class|="layerContainer"]
 
 // Better shrunken screen
 @media screen and (max-width: 1100px) {
-  div[class|="avatarWrapper"] div[class|="nameTag"],
+  div[class|="avatarWrapper"],
   section[class|="panels"]
     div[class|="container"]
     div[class|="flex"]
