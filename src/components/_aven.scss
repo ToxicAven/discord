@@ -45,7 +45,8 @@ main[class|="chatContent"]
 // Various nitro cleanups
 div[class|="userPopoutInner"] > div[class|="wrapper"],
 div[class|="premiumTier0Badge"],
-div[class|="notice"][class*="colorPremium-"] {
+div[class|="notice"][class*="colorPremium-"],
+div[class|="premiumLabel"] svg {
   display: none;
 }
 
