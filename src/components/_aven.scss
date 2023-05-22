@@ -508,8 +508,8 @@ div[class|="channelEmoji"] {
 
 // remove Nitro and Discord Birthday tag
 nav[class|="privateChannels"] {
-  :nth-child(3),
-  :nth-child(4) {
+  ul > li:nth-child(3),
+  ul > li:nth-child(4) {
     display: none;
   }
 }
