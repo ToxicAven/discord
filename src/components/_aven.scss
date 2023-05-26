@@ -886,6 +886,11 @@ div[class*="actions-"] button svg > path {
   fill: $crust !important;
 }
 
+// unthemed borders on image uploads
+div[class|="uploadContainer"] div[class|="spoilerWrapper"] {
+  background-color: $mantle;
+}
+
 // not matchy hljs codeblock background
 .hljs {
   background-color: $mantle !important;
