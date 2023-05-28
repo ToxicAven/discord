@@ -471,16 +471,16 @@ div[class|="messageAttachment"] {
   }
 
   [class*="winButtonClose-"]::after {
-    background-color: #f38ba8 !important;
+    background-color: $red !important;
   }
 
   [class*="winButtonMinMax-"] {
     &:nth-child(3)::after {
-      background-color: #a6e3a1 !important;
+      background-color: $green !important;
     }
 
     &:nth-child(4)::after {
-      background-color: #f9e2af !important;
+      background-color: $yellow !important;
     }
   }
 
