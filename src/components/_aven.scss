@@ -391,11 +391,6 @@ section[class|="panels"] {
   }
 }
 
-// Vencord themes box should use accent
-#vencordthemes-tab [class*="input-"]:focus {
-  border-color: $brand !important;
-}
-
 // Typing indicators
 [class|="dots"] {
   color: $crust;
@@ -692,10 +687,7 @@ html:not(.reduce-motion) [class*="userPopoutOuter-"] [class*="activity-"] {
 // Revert pleading face
 /* Credit to Niko's trans UK flag code :3 https://github.com/XWasHere/sane-discord/ */
 [class|="inspector"] img[alt="\:pleading_face\:"],
-[data-type="emoji"]:is(
-    [data-name="\:pleading_face\:"],
-    [data-name="pleading_face"]
-  ) {
+[data-type="emoji"]:is([data-name="\:pleading_face\:"], [data-name="pleading_face"]) {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background: url("https://toxicaven.dev/pleading.svg") no-repeat;
@@ -784,11 +776,7 @@ html:not(.reduce-motion) [class*="jumpToPresentBar"] {
 // Show edit timestamps on edited messages
 [class|="message"] [class|="contents"] {
   div:not(div.messagelogger-edited)
-    > span[class*="timestamp-"]:not(
-      [class*="timestampInline-"],
-      [class*="timestampVisibleOnHover-"],
-      [class*="CompactTimeStamp-"]
-    )
+    > span[class*="timestamp-"]:not([class*="timestampInline-"], [class*="timestampVisibleOnHover-"], [class*="CompactTimeStamp-"])
     time::after {
     content: " (" attr(aria-label) ")";
     color: var(--text-muted);
