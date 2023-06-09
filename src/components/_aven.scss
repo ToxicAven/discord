@@ -212,6 +212,14 @@ html:not(.reduce-motion) {
   }
 }
 
+// Various Reduced motion fixes
+html.reduce-motion {
+  // Remove typing dots
+  [class|="typing"] [class|="typingDots"] > svg {
+    display: none;
+  }
+}
+
 // Shrink codeblocks to only be as wide as necessary
 div[class|="markup"] code {
   width: fit-content;
