@@ -74,7 +74,7 @@ nav[class|="sidebar"] div[class|="info"]::before {
 
 /* Aven's profile easter egg */
 div[class|="layerContainer"]
-  div[aria-label="ToxicAven"]
+  div[aria-label="toxicaven"]
   div[class|="userTagWithNickname"]::after {
   content: " • Thanks for using my theme!";
   font-size: 14px;
@@ -82,6 +82,14 @@ div[class|="layerContainer"]
   font-family: Whitney, "gg sans", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   color: var(--header-secondary);
+}
+
+// add an @ before pomelo usernames
+div[class*="userTagWithNickname"],
+div[class*="nameTagSmall"] {
+  span:only-child:before {
+    content: "@";
+  }
 }
 
 // Better shrunken screen
