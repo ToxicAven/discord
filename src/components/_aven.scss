@@ -92,6 +92,11 @@ div[class*="nameTagSmall"] {
   }
 }
 
+// Show the entire about me section, instead of only 6 lines
+div[class*="userPopoutOuter"] div[class*="markup"] div {
+  display: block !important;
+}
+
 // Better shrunken screen
 @media screen and (max-width: 1100px) {
   div[class|="avatarWrapper"],
