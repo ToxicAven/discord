@@ -129,6 +129,16 @@ div[class*="userPopoutOuter"] div[class*="markup"] div {
   }
 }
 
+// Fix subscription channel icons being sunken
+nav[class|="container"] ul[class|="content"] {
+  div[class|="content"] {
+    align-items: center;
+  }
+  div[class|="children"] {
+    margin-top: auto;
+  }
+}
+
 // Alert user if they are using the wrond discord theme coloring
 html:not(#{$type}) {
   [class|="title"] [class|="titleWrapper"] h1::after {
