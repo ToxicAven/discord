@@ -532,10 +532,9 @@ div[class|="channelEmoji"] {
   display: none;
 }
 
-// remove Nitro and Discord Birthday tag
+// remove Nitro tag in friends menu
 nav[class|="privateChannels"] {
-  ul > li:nth-child(3),
-  ul > li:nth-child(4) {
+  ul > li:nth-child(3) {
     display: none;
   }
 }
