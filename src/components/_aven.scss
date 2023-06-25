@@ -85,11 +85,10 @@ div[class|="layerContainer"]
 }
 
 // add an @ before pomelo usernames
-div[class*="userTagWithNickname"],
-div[class*="nameTagSmall"] {
-  span:only-child:before {
-    content: "@";
-  }
+div[class*="userTagWithNickname"] span:only-child:before,
+div[class*="nameTagSmall"] span:only-child:before,
+div[class|="hoverRoll"] div[class|="hovered"]:before {
+  content: "@";
 }
 
 // Show the entire about me section, instead of only 6 lines
