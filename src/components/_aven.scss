@@ -87,7 +87,8 @@ div[class|="layerContainer"]
 // add an @ before pomelo usernames
 div[class*="userTagWithNickname"] span:only-child:before,
 div[class*="nameTagSmall"] span:only-child:before,
-div[class|="hoverRoll"] div[class|="hovered"]:before {
+div[class|="hoverRoll"] div[class|="hovered"]:before,
+div[class|="userMenuUsername"] div[class*="userMenuText-"]:before {
   content: "@";
 }
 
