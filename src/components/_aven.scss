@@ -30,6 +30,14 @@ main[class|="chatContent"]
   animation: neko 1s infinite;
 }
 
+html.reduce-motion
+  main[class|="chatContent"]
+  form[class|="form"]
+  div[class|="channelTextArea"]::before {
+  animation: none;
+  background-position: -96px -96px;
+}
+
 @keyframes neko {
   0%,
   50% {
