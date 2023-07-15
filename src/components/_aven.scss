@@ -80,6 +80,13 @@ nav[class|="sidebar"] div[class|="info"]::before {
   font-weight: 400;
 }
 
+// Fix discord's strange list margins
+div[class|="message"] div[class|="markup"] ol {
+  margin-top: 4px;
+  margin-left: unset;
+  list-style-position: inside !important;
+}
+
 /* Aven's profile easter egg */
 div[class|="layerContainer"]
   div[aria-label="toxicaven"]
