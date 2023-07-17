@@ -584,14 +584,6 @@ div[class*="userProfileOuter-"] {
   }
 }
 
-[class*="layerContainer-"] [class*="toolbar-"] {
-  background-color: var(--background-floating);
-
-  [class*="buttons-"] [class*="icon-"] {
-    color: $text;
-  }
-}
-
 [class*="layerContainer-"] div[id="sort-and-view"] {
   div[id="sort-and-view-reset-all"] [style="color: var(--text-normal);"]:hover {
     color: $crust !important;
