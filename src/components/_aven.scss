@@ -916,8 +916,18 @@ section[class|="title"] div[class|="toolbar"] a[class|="anchor"] {
 }
 
 // Catppuccin: call buttons
-div[class*="actions-"] button svg > path {
-  fill: $crust !important;
+div[class*="actions-"] {
+  button[class*="green-"] {
+    background: $green;
+  }
+
+  button[class*="red-"] {
+    background: $red;
+  }
+
+  button svg > path {
+    fill: $crust !important;
+  }
 }
 
 // unthemed borders on image uploads
