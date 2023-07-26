@@ -846,9 +846,11 @@ div[class|="message"] div[class|="contents"] [class*="messageContent-"] {
 }
 
 // Hide blocked messages
+/*
 div[class|="groupStart"] > div[class*="cozy"] {
   display: none;
 }
+*/
 
 // remove user popout AKA section
 div[class|="userPopoutOuter"]
