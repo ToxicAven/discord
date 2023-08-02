@@ -88,18 +88,6 @@ div[class|="message"] div[class|="markup"] ol {
   list-style-position: inside !important;
 }
 
-/* Aven's profile easter egg */
-div[class|="layerContainer"]
-  div[aria-label="toxicaven"]
-  div[class|="userTagWithNickname"]::after {
-  content: " • Thanks for using my theme!";
-  font-size: 14px;
-  font-weight: 500;
-  font-family: Whitney, "gg sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  color: var(--header-secondary);
-}
-
 // add an @ before pomelo usernames
 div[class*="userTagWithNickname"] span:only-child:before,
 div[class*="nameTagSmall"] span:only-child:before,
