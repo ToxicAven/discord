@@ -1,3 +1,4 @@
+@use "string";
 // Revert gg sans
 @import "font";
 
@@ -78,6 +79,7 @@ nav[class|="sidebar"] div[class|="info"]::before {
   line-height: 16px;
   font-family: var(--font-primary);
   font-weight: 400;
+  text-transform: none;
 }
 
 // Fix discord's strange list margins
