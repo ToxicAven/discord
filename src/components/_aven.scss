@@ -1,4 +1,3 @@
-@use "string";
 // Revert gg sans
 @import "font";
 
@@ -371,31 +370,20 @@ div[class|="sprite"]:hover {
 }
 
 // Gradient discord logo
-div[class|="tutorialContainer"] div[class|="childWrapper"] {
-  svg[class|="homeIcon"] path {
-    fill: $crust !important;
-  }
+html {
+  div[class|="tutorialContainer"] div[class|="childWrapper"] {
+    background: $brand;
 
-  g#icon {
-    fill: $crust !important;
-
-    path:not(:first-child) {
-      display: none;
+    svg[class|="homeIcon"] path {
+      fill: $crust !important;
     }
   }
 
-  > svg g:not(#icon) rect {
-    display: none;
+  &.full-motion div[class|="tutorialContainer"] div[class|="childWrapper"] {
+    background: linear-gradient(-45deg, $peach, $red, $sky, $green);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
   }
-
-  background: linear-gradient(-45deg, $peach, $red, $sky, $green);
-  background-size: 400% 400%;
-}
-
-html:not(.reduce-motion)
-  div[class|="tutorialContainer"]
-  div[class|="childWrapper"] {
-  animation: gradientBG 10s ease infinite;
 }
 
 @keyframes gradientBG {
