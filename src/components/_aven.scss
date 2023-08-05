@@ -81,13 +81,6 @@ nav[class|="sidebar"] div[class|="info"]::before {
   text-transform: none;
 }
 
-// Fix discord's strange list margins
-div[class|="message"] div[class|="markup"] ol {
-  margin-top: 4px;
-  margin-left: unset;
-  list-style-position: inside !important;
-}
-
 // add an @ before pomelo usernames
 div[class*="userTagWithNickname"] span:only-child:before,
 div[class*="nameTagSmall"] span:only-child:before,
