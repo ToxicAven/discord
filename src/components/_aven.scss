@@ -942,7 +942,7 @@ div[class|="uploadContainer"] div[class|="spoilerWrapper"] {
 [class|="inlineCode"],
 code.inline,
 code,
-div[class|="rtcConnectionStatus"] span, // vencord time elapsed
+section[class|="panels"] div[class|="inner"] span, // vencord time elapsed
 .hljs {
   font-family: var(--code-font), var(--font-code) !important;
 }
