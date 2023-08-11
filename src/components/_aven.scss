@@ -54,7 +54,8 @@ html.reduce-motion
 div[class|="userPopoutInner"] > div[class|="wrapper"],
 div[class|="premiumTier0Badge"],
 div[class|="notice"][class*="colorPremium-"],
-div[class|="premiumLabel"] svg {
+div[class|="premiumLabel"] svg,
+[class|="premiumIconWrapper"] {
   display: none;
 }
 
