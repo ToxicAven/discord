@@ -7,17 +7,12 @@ div[class|="newMemberBadge"] {
 }
 
 // Get rid of thread suggestion bar
-main[class|="chatContent"]
-  form[class|="form"]
-  div[class|="channelTextArea"]
-  div[class|="threadSuggestionBar"] {
+div[class|="threadSuggestionBar"] {
   display: none;
 }
 
 // Optional sleepy oneko on message box
-main[class|="chatContent"]
-  form[class|="form"]
-  div[class|="channelTextArea"]::before {
+div[class|="channelTextArea"]::before {
   display: none;
   content: "";
   width: 32px;
@@ -30,10 +25,7 @@ main[class|="chatContent"]
   animation: neko 1s infinite;
 }
 
-html.reduce-motion
-  main[class|="chatContent"]
-  form[class|="form"]
-  div[class|="channelTextArea"]::before {
+html.reduce-motion div[class|="channelTextArea"]::before {
   animation: none;
   background-position: -96px -96px;
 }
@@ -168,7 +160,7 @@ html:not(#{$type}) {
 }
 
 // Remove spotify play button on the upload button
-main[class|="chatContent"] form[class|="form"] div[class|="channelTextArea"] {
+div[class|="channelTextArea"] {
   path[class|="attachButtonPlus"] {
     d: path(
       "M12 2.00098C6.486 2.00098 2 6.48698 2 12.001C2 17.515 6.486 22.001 12 22.001C17.514 22.001 22 17.515 22 12.001C22 6.48698 17.514 2.00098 12 2.00098ZM17 13.001H13V17.001H11V13.001H7V11.001H11V7.00098H13V11.001H17V13.001Z"
@@ -717,7 +709,10 @@ html:not(.reduce-motion) [class*="userPopoutOuter-"] [class*="activity-"] {
 // Revert pleading face
 /* Credit to Niko's trans UK flag code :3 https://github.com/XWasHere/sane-discord/ */
 [class|="inspector"] img[alt="\:pleading_face\:"],
-[data-type="emoji"]:is([data-name="\:pleading_face\:"], [data-name="pleading_face"]) {
+[data-type="emoji"]:is(
+    [data-name="\:pleading_face\:"],
+    [data-name="pleading_face"]
+  ) {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background: url("https://toxicaven.dev/pleading.svg") no-repeat;
@@ -806,7 +801,11 @@ html:not(.reduce-motion) [class*="jumpToPresentBar"] {
 // Show edit timestamps on edited messages
 [class|="message"] [class|="contents"] {
   div:not(div.messagelogger-edited)
-    > span[class*="timestamp-"]:not([class*="timestampInline-"], [class*="timestampVisibleOnHover-"], [class*="CompactTimeStamp-"])
+    > span[class*="timestamp-"]:not(
+      [class*="timestampInline-"],
+      [class*="timestampVisibleOnHover-"],
+      [class*="CompactTimeStamp-"]
+    )
     time::after {
     content: " (" attr(aria-label) ")";
     color: var(--text-muted);
