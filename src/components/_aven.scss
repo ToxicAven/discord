@@ -385,22 +385,24 @@ div[class|="userPopoutInner"]
 }
 
 // Vencord spotify tweaks
-html.full-motion section[class|="panels"] div#vc-spotify-player {
-  div.vc-spotify-button-row {
-    position: relative !important;
-    will-change: height;
-    height: 0;
-    opacity: 0;
-    transition:
-      height 0.2s,
-      opacity 0.4s,
-      position 0s;
-  }
+html.full-motion section[class|="panels"] {
+  div#vc-spotify-player {
+    div.vc-spotify-button-row {
+      position: relative !important;
+      will-change: height;
+      height: 0;
+      opacity: 0;
+      transition:
+        height 0.2s,
+        opacity 0.4s,
+        position 0s;
+    }
 
-  &:hover div.vc-spotify-button-row {
-    position: flex !important;
-    height: 32px;
-    opacity: 1;
+    &:hover div.vc-spotify-button-row {
+      position: flex !important;
+      height: 32px;
+      opacity: 1;
+    }
   }
 
   div[class|="container"] {
