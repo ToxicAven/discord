@@ -627,3 +627,20 @@ div[class*="userProfileOuter-"] {
 [class|="layerContainer"] [class|="quickswitcher"] [class*="badge-"] {
   color: $crust;
 }
+
+// Clyde user popout
+div[class|="layerContainer"] div[aria-label="clyde"] {
+  div[class|="profileBadges"] div[class|="textBadge"] {
+    background-color: $brand !important;
+    color: $crust;
+  }
+
+  button[class|="messageClydeButton"] {
+    color: $text;
+    background-color: $surface1;
+
+    &:hover {
+      background-color: $surface2;
+    }
+  }
+}
