@@ -886,6 +886,22 @@ div[class|="userProfileModalOuter"]
   border-radius: 3px;
 }
 
+[class*="ByOneGrid-"]:not([class*="OneGridSingle-"]),
+[class*="ByTwoGrid-"],
+[class*="ByThreeGrid-"] {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+}
+[class*="ByOneGrid-"]:not([class*="OneGridSingle-"]) [class*="lazyImg"],
+[class*="ByTwoGrid-"] [class*="lazyImg"],
+[class*="ByThreeGrid-"] [class*="lazyImg"] {
+  aspect-ratio: unset;
+  height: auto !important;
+  width: auto !important;
+  margin-left: 0px !important;
+}
+
 // Add server and discovery buttons should use accent
 ul[class|="tree"]
   div[class|="scroller"]
