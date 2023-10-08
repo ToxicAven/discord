@@ -93,7 +93,9 @@ div[class*="userPopoutOuter"] div[class*="markup"] div {
   div[class|="avatarWrapper"],
   section[class|="panels"] div[class|="flex"] [class|="inner"],
   div[class|="membersWrap"][class*="hiddenMembers-"],
-  aside[class|="membersWrap"][class*="hiddenMembers-"] {
+  div[class|="container"]:has(
+      > [class|="membersWrap"][class*="hiddenMembers-"]
+    ) {
     display: none;
   }
 
