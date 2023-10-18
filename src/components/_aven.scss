@@ -327,7 +327,9 @@ html:not(.reduce-motion) {
     background: none !important;
     width: 24px;
     color: var(--color-text);
-    transition: width 0.2s, padding 0.5s;
+    transition:
+      width 0.2s,
+      padding 0.5s;
     padding: 0;
   }
 
@@ -358,7 +360,7 @@ html {
   div[class|="tutorialContainer"] div[class|="childWrapper"] {
     background: $brand;
 
-    svg[class|="homeIcon"] path {
+    svg path {
       fill: $crust !important;
     }
   }
@@ -399,7 +401,10 @@ html.full-motion section[class|="panels"] {
       will-change: height;
       height: 0;
       opacity: 0;
-      transition: height 0.2s, opacity 0.4s, position 0s;
+      transition:
+        height 0.2s,
+        opacity 0.4s,
+        position 0s;
     }
 
     &:hover div.vc-spotify-button-row {
@@ -781,7 +786,10 @@ html:not(.reduce-motion) [class*="jumpToPresentBar"] {
     display: flex;
     font-size: 0;
     color: transparent;
-    transition: font-size 150ms 0s, color 150ms 0s, padding 150ms 0s;
+    transition:
+      font-size 150ms 0s,
+      color 150ms 0s,
+      padding 150ms 0s;
   }
 
   > button svg {
@@ -801,7 +809,10 @@ html:not(.reduce-motion) [class*="jumpToPresentBar"] {
     padding: 8px 18px !important;
     font-size: 14px;
     color: var(--text-normal);
-    transition: font-size 150ms 1.1s, color 150ms 1.1s, padding 150ms 1.1s;
+    transition:
+      font-size 150ms 1.1s,
+      color 150ms 1.1s,
+      padding 150ms 1.1s;
     background-color: var(--background-tertiary);
 
     svg {
