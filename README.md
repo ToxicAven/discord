@@ -34,31 +34,6 @@
 
 ## Usage
 
-### [BeautifulDiscord](https://github.com/leovoel/BeautifulDiscord)
-
-1. Download your preferred flavour:
-
-- 🌻 [Latte](./themes/latte.theme.css?raw=1)
-- 🪴 [Frappe](./themes/frappe.theme.css?raw=1)
-- 🌺 [Macchiato](./themes/macchiato.theme.css?raw=1)
-- 🌿 [Mocha](./themes/mocha.theme.css?raw=1)
-
-2. Move the downloaded file into a location of your choosing, for example `~/.config/discord` on Linux or `%APPDATA%\discord` on Windows.
-
-3. Ensure Discord is **running**.
-4. Install and run [BeautifulDiscord](https://github.com/leovoel/BeautifulDiscord#installing):
-```bash
-# Install using pip
-python3 -m pip install -U https://github.com/leovoel/BeautifulDiscord/archive/master.zip
-
-# Run BeautifulDiscord providing the path to your downloaded theme file
-# Linux:
-beautifuldiscord --css ~/.config/discord/catppuccin-mocha.theme.css
-
-# Windows:
-beautifuldiscord --css %APPDATA%\discord\catppuccin-mocha.theme.css
-```
-
 ### [BetterDiscord](https://betterdiscord.app)
 
 1. Download your preferred flavour:
@@ -73,7 +48,7 @@ beautifuldiscord --css %APPDATA%\discord\catppuccin-mocha.theme.css
 
 ### Clients/Mods with custom CSS support
 
-1. Simply add your preferred flavour into `Discord > Settings > Custom CSS`
+1. Simply add your preferred flavour into your discord clients CustomCSS file/editor.
 
 ```css
 /* latte */
@@ -123,9 +98,7 @@ curl -L https://toxicaven.dev/theme/catppuccin-frappe-maroon.theme.css > ~/.conf
 ## 🙋 FAQ
 
 - Q: **_"Can this get my account banned?"_**
-- A: Using third party clients and injecting custom css is against the ToS. We are not responsible for anything that might happen to your account by using third party clients. Use at your own discretion!
-- Q: **_"Latte/Light theme doesn't look right!?"_**
-- A: Using the Latte theme requires Discord's light mode to be on. You can set it up to sync between e.g. Mocha in dark mode, and Latte in light mode with this snippet:
+- A: Using third party clients and injecting custom css is against the ToS. While nobody has ever been banned for simply using discord client mods, We are not responsible for anything that might happen to your account by using third party clients. Use at your own discretion!
 
   ```css
   @import url("https://toxicaven.dev/theme/catppuccin-mocha.theme.css") (prefers-color-scheme: dark);
@@ -139,6 +112,7 @@ curl -L https://toxicaven.dev/theme/catppuccin-frappe-maroon.theme.css > ~/.conf
 - [Ren](https://github.com/watatomo)
 - [winston](https://github.com/nekowinston)
 - [rubyowo](https://github.com/rubyowo)
+- [Aven](https://github.com/ToxicAven)
 
 &nbsp;
 
