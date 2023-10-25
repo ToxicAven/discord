@@ -571,7 +571,7 @@ div[class^="message"]
   img,
   video,
   [class*="ready_"],
-  [class*="content-"] [class*="text_"] {
+  [class*="content_"] [class*="text_"] {
     display: none;
   }
 
@@ -590,13 +590,13 @@ div[class^="message"]
 }
 
 // Remove extra text from emoji hover tooltip
-[class*="tooltip-"] [class*="text-sm-normal-"][class*="clickCTA_"] {
+[class*="tooltip_"] [class*="text-sm-normal_"][class*="clickCTA_"] {
   display: none;
 }
 
 // Wavy spotify
 /* Credit to https://github.com/Comfy-Themes/Discord */
-html:not(.reduce-motion) [class*="userPopoutOuter-"] [class*="activity_"] {
+html:not(.reduce-motion) [class*="userPopoutOuter_"] [class*="activity_"] {
   --wave-width: 284px;
   padding: 16px;
   margin-top: 25px;
@@ -873,7 +873,7 @@ div[class^="userProfileModalOuter"]
 
 // Revert Mosaic images
 /* Original code by Teltta#2064 */
-[class*="ByOneGrid-"]:not([class*="OneGridSingle_"]),
+[class*="ByOneGrid_"]:not([class*="OneGridSingle_"]),
 [class*="ByTwoGrid_"],
 [class*="ByThreeGrid_"] {
   display: flex;
@@ -900,14 +900,14 @@ div[class^="userProfileModalOuter"]
   border-radius: 3px;
 }
 
-[class*="ByOneGrid-"]:not([class*="OneGridSingle_"]),
+[class*="ByOneGrid_"]:not([class*="OneGridSingle_"]),
 [class*="ByTwoGrid_"],
 [class*="ByThreeGrid_"] {
   display: flex;
   flex-direction: column;
   max-height: 100%;
 }
-[class*="ByOneGrid-"]:not([class*="OneGridSingle_"]) [class*="lazyImg"],
+[class*="ByOneGrid_"]:not([class*="OneGridSingle_"]) [class*="lazyImg"],
 [class*="ByTwoGrid_"] [class*="lazyImg"],
 [class*="ByThreeGrid_"] [class*="lazyImg"] {
   aspect-ratio: unset;
