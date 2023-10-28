@@ -919,7 +919,7 @@ div[class^="userProfileModalOuter"]
 // Add server and discovery buttons should use accent
 ul[class^="tree"]
   div[class^="scroller"]
-  div[class^="circleIconButton"]
+  div[class^="circleIconButton"]:not(:hover)
   svg
   > path {
   fill: $brand !important;
