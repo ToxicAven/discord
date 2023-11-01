@@ -916,15 +916,6 @@ div[class^="userProfileModalOuter"]
   margin-left: 0px !important;
 }
 
-// Add server and discovery buttons should use accent
-ul[class^="tree"]
-  div[class^="scroller"]
-  div[class^="circleIconButton"]:not(:hover)
-  svg
-  > path {
-  fill: $brand !important;
-}
-
 // File upload progress should use accent
 div[class^="attachment"]
   div[class^="progressContainer"]
