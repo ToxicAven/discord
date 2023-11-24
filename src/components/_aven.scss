@@ -284,8 +284,20 @@ div[class^="channelTextArea"] {
   height: 16px;
 }
 
-// Rising file attachment animation
+// Thanos super reactions
+/* idk stole from vencord server at 3am */
+[aria-label^="Add Super Reaction"],
+#message-add-reaction-1,
+#super-reaction-picker-tab,
+[class^="burstEmojiSection_"],
+[aria-label^="Reaction Picker Categories"],
+[class^="reactionDefault_"][aria-label*="super reaction"],
+[class^="reactionSelected_"][aria-label*="super reaction"],
+[class^="reactions_"] > div > [style*="background:"] {
+  display: none !important;
+}
 
+// Rising file attachment animation
 html:not(.reduce-motion)
   div[class^="scrollableContainer"]
   ul[class^="channelAttachmentArea"] {
