@@ -892,21 +892,6 @@ section[class^="title"] div[class^="toolbar"] a[class^="anchor"] {
   display: none;
 }
 
-// Catppuccin: call buttons
-div[class*="actions_"] {
-  button[class*="green_"] {
-    background: $green;
-  }
-
-  button[class*="red_"] {
-    background: $red;
-  }
-
-  button svg > path {
-    fill: $crust !important;
-  }
-}
-
 // call region padding
 [class^="callContainer"] [class^="topControls"] [class^="flex"]:first-child {
   padding-top: 8px;
