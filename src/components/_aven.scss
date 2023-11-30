@@ -88,6 +88,11 @@ div[class*="userPopoutOuter"] div[class*="markup"] div {
   display: block !important;
 }
 
+// Remove remix tag because who cares where your memes were made
+[class*="botTagRemix"] {
+  display: none;
+}
+
 // Better shrunken screen
 @media screen and (max-width: 1100px) {
   div[class^="avatarWrapper"],
