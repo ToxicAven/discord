@@ -11,6 +11,25 @@ div[class^="threadSuggestionBar"] {
   display: none;
 }
 
+// Remove chat mod tag
+span[class^="botTag"] {
+  &[data-tag="app • chat mod"] span[class^="botText"] {
+    text-indent: -9999px;
+    line-height: 0;
+
+    &::after {
+      text-indent: 0;
+      display: block;
+      line-height: initial;
+      content: "APP";
+    }
+  }
+
+  &[data-tag="chat mod"] {
+    display: none;
+  }
+}
+
 // Optional sleepy oneko on message box
 div[class^="channelTextArea"]::before {
   display: none;
