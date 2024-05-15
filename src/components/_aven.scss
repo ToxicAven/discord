@@ -498,7 +498,7 @@ div[class^="mediaAttachmentsContainer"] {
 }
 
 // fix ugly audio/file containers
-div[class^="messageAttachment"] {
+div[class^="nonVisualMediaItem"] {
   div[class^="attachment"][class*="newMosaicStyle_"] {
     padding: 10px 20px !important;
     width: fit-content;
