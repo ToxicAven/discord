@@ -96,6 +96,7 @@ nav[class^="sidebar"] div[class^="info"]::before {
 // add an @ before pomelo usernames
 div[class*="userTagWithNickname"]
   span:not([class^="botText"]):only-child:before,
+div[class*="userTagWithNickname"] span[class^="userTagUsernameBase"]:before,
 div[class*="nameTagSmall"] span:only-child:before,
 div[class^="hoverRoll"] div[class^="hovered"]:before,
 div[class^="userMenuUsername"] div[class*="userMenuText_"]:before {
