@@ -31,7 +31,7 @@ span[class^="botTag"] {
 }
 
 // Optional sleepy oneko on message box
-div[class^="channelTextArea"]::before {
+div[class^="channelTextArea_"]::before {
   display: none;
   content: "";
   width: 32px;
@@ -44,7 +44,7 @@ div[class^="channelTextArea"]::before {
   animation: neko 1s infinite;
 }
 
-html.reduce-motion div[class^="channelTextArea"]::before {
+html.reduce-motion div[class^="channelTextArea_"]::before {
   animation: none;
   background-position: -96px -96px;
 }
