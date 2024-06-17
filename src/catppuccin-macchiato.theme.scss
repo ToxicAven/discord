@@ -10,6 +10,7 @@
 
 @use "sass:math";
 @use "@catppuccin/palette/scss/macchiato" as *;
+@use "@catppuccin/highlightjs/sass/theme";
 
 $brand: $blue;
 $type: ".theme-dark";
@@ -21,5 +22,5 @@ button[class*="emojiButtonNormal"] > div > div {
 
 @import "theme";
 .theme-dark {
-  @import "@catppuccin/highlightjs/sass/catppuccin-macchiato";
+  @include theme.highlights("macchiato", "hex");
 }
