@@ -31,7 +31,7 @@ span[class^="botTag"] {
 }
 
 // Optional sleepy oneko on message box
-div[class^="channelTextArea_"]::before {
+:not(div[class^="userPopoutInner"]) div[class^="channelTextArea_"]::before {
   display: none;
   content: "";
   width: 32px;
@@ -44,7 +44,9 @@ div[class^="channelTextArea_"]::before {
   animation: neko 1s infinite;
 }
 
-html.reduce-motion div[class^="channelTextArea_"]::before {
+html.reduce-motion
+  :not(div[class^="userPopoutInner"])
+  div[class^="channelTextArea_"]::before {
   animation: none;
   background-position: -96px -96px;
 }
@@ -106,6 +108,11 @@ div[class^="userMenuUsername"] div[class*="userMenuText_"]:before {
 // Show the entire about me section, instead of only 6 lines
 div[class*="userPopoutOuter"] div[class*="markup"] div {
   display: block !important;
+}
+
+div[class^="descriptionClamp"] {
+  display: unset !important;
+  overflow: visible !important;
 }
 
 // Remove remix tag because who cares where your memes were made
@@ -629,7 +636,7 @@ div[class^="message"]
 // Wavy spotify
 /* Credit to https://github.com/Comfy-Themes/Discord */
 html:not(.reduce-motion) [class*="userPopoutOuter_"] [class*="activity_"] {
-  --wave-width: 284px;
+  --wave-width: 268px;
   padding: 16px;
   margin-top: 25px;
   z-index: 1;
