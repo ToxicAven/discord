@@ -1,0 +1,22 @@
+@mixin aven_font($name, $styles, $widths...) {
+    @each $style in $styles {
+        @each $width in $widths {
+            @font-face {
+                font-family: $name;
+                font-style:  $style;
+                font-weight: $width;
+                src:         url("https://toxicaven.dev/assets/" + $name + "-" + $width + "-" + $style + ".woff2") format("woff2");
+            }
+        }
+    }
+}
+
+@include aven_font("Whitney",          [normal italic], 300, 400, 500, 600, 700);
+@include aven_font("ABC Ginto Normal", [normal italic],      400, 500,      700);
+
+:root {
+  --font-primary: Whitney, "Helvetica Neue", "gg sans", Helvetica, Arial,
+    sans-serif !important;
+  --font-display: "ABC Ginto Normal", "Helvetica Neue", "gg sans", Helvetica,
+    Arial, sans-serif !important;
+}

@@ -1,0 +1,957 @@
+// Revert gg sans
+@import "font";
+
+// Hide New member name badge
+div[class^="newMemberBadge"] {
+  display: none;
+}
+
+// Get rid of thread suggestion bar
+div[class^="threadSuggestionBar"] {
+  display: none;
+}
+
+// Remove chat mod tag
+span[class^="botTag"] {
+  &[data-tag="app • chat mod"] span[class^="botText"] {
+    text-indent: -9999px;
+    line-height: 0;
+
+    &::after {
+      text-indent: 0;
+      display: block;
+      line-height: initial;
+      content: "APP";
+    }
+  }
+
+  &[data-tag="chat mod"] {
+    display: none;
+  }
+}
+
+// Optional sleepy oneko on message box
+:not(div[class^="userPopoutInner"]) div[class^="channelTextArea_"]::before {
+  display: none;
+  content: "";
+  width: 32px;
+  height: 32px;
+  bottom: calc(100% - 3px);
+  right: 10px;
+  position: absolute;
+  image-rendering: pixelated;
+  background-image: url("https://raw.githubusercontent.com/adryd325/oneko.js/main/oneko.gif");
+  animation: neko 1s infinite;
+}
+
+html.reduce-motion
+  :not(div[class^="userPopoutInner"])
+  div[class^="channelTextArea_"]::before {
+  animation: none;
+  background-position: -96px -96px;
+}
+
+@keyframes neko {
+  0%,
+  50% {
+    background-position: -64px 0;
+  }
+
+  50.00001%,
+  100% {
+    background-position: -64px -32px;
+  }
+}
+
+// Various nitro cleanups
+div[class^="userPopoutInner"] > div[class^="wrapper"],
+div[class^="premiumTier0Badge"],
+div[class^="notice"][class*="colorPremium_"],
+div[class^="premiumLabel"] svg,
+[class^="premiumIconWrapper"] {
+  display: none;
+}
+
+// Fix menu carets
+div[class^="menu"] {
+  div[class*="colorPremiumGradient_"] svg[class^="icon"] {
+    display: none;
+  }
+
+  svg[class^="caret"] {
+    transform: scale(1.75);
+    padding-left: 0.2rem;
+  }
+}
+
+// Theme info in client version area
+nav[class^="sidebar"] div[class^="info"]::before {
+  content: "Catppuccin Aven " + $version;
+  color: $subtext0;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  text-transform: none;
+}
+
+// add an @ before pomelo usernames
+div[class*="userTagWithNickname"]
+  span:not([class^="botText"]):only-child:before,
+div[class*="userTagWithNickname"] span[class^="userTagUsernameBase"]:before,
+div[class*="nameTagSmall"] span:only-child:before,
+div[class^="hoverRoll"] div[class^="hovered"]:before,
+div[class^="userMenuUsername"] div[class*="userMenuText_"]:before {
+  content: "@";
+}
+
+// Show the entire about me section, instead of only 6 lines
+div[class*="userPopoutOuter"] div[class*="markup"] div {
+  display: block !important;
+}
+
+div[class^="descriptionClamp"] {
+  display: unset !important;
+  overflow: visible !important;
+}
+
+// Remove remix tag because who cares where your memes were made
+[class*="botTagRemix"] {
+  display: none;
+}
+
+// Better shrunken screen
+@media screen and (max-width: 1100px) {
+  div[class^="avatarWrapper"],
+  section[class^="panels"] div[class^="flex"] [class^="inner"],
+  div[class^="membersWrap"][class*="hiddenMembers_"],
+  div[class^="container"]:has(
+      > [class^="membersWrap"][class*="hiddenMembers_"]
+    ) {
+    display: none;
+  }
+
+  div[class^="sidebar"] {
+    width: 20vw;
+  }
+
+  section[class^="panels"] {
+    div[class^="flex"] {
+      justify-content: center;
+      flex: 1 1 auto !important;
+    }
+
+    div[class^="actionButtons"] {
+      :nth-child(3),
+      :nth-child(4) {
+        display: none;
+      }
+
+      svg {
+        min-width: 8px;
+        min-height: 8px;
+      }
+    }
+  }
+}
+
+// Fix subscription channel icons being sunken
+nav[class^="container"] ul[class^="content"] {
+  div[class^="content"] {
+    align-items: center;
+  }
+  div[class^="children"] {
+    margin: auto;
+  }
+}
+
+// Alert user if they are using the wrond discord theme coloring
+html:not(#{$type}) {
+  [class^="title"] [class^="titleWrapper"] h1::after {
+    @if #{$type} == ".theme-dark" {
+      content: " USE DARK THEME";
+    } @else {
+      content: " USE LIGHT THEME";
+    }
+    padding-left: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Whitney, "gg sans", "Helvetica Neue", Helvetica, Arial,
+      sans-serif;
+    color: $red;
+  }
+  &:not(.reduce-motion) [class^="title"] [class^="titleWrapper"] h1::after {
+    animation: warningBlink 1s infinite;
+  }
+}
+
+@keyframes warningBlink {
+  from {
+    color: $red;
+  }
+  to {
+    color: $text;
+  }
+}
+
+// Remove spotify play button on the upload button
+div[class^="channelTextArea"] {
+  path[class^="attachButtonPlus"] {
+    d: path(
+      "M12 2.00098C6.486 2.00098 2 6.48698 2 12.001C2 17.515 6.486 22.001 12 22.001C17.514 22.001 22 17.515 22 12.001C22 6.48698 17.514 2.00098 12 2.00098ZM17 13.001H13V17.001H11V13.001H7V11.001H11V7.00098H13V11.001H17V13.001Z"
+    );
+  }
+
+  path[class^="attachButtonPlay"] {
+    display: none;
+  }
+}
+
+// Roll pill inherits color from role circle
+[class^="role"] {
+  transform: translate(0);
+  overflow: hidden;
+  border: 0;
+  border-radius: 5px;
+
+  [class^="roleRemoveIcon"] {
+    margin: 0;
+    left: unset;
+    transform: translate(50%, -50%);
+  }
+
+  [class^="roleRemoveButton"] {
+    position: static;
+  }
+
+  [class^="roleCircle"]:after {
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    opacity: 0.3;
+  }
+}
+
+// Collapsing sidebar header banner
+html:not(.reduce-motion) {
+  div[class^="sidebar"] nav[class^="container"] {
+    div[class^="animatedContainer"] {
+      opacity: 1 !important;
+      transition: opacity 0.5s;
+
+      > div[class^="bannerImage"] {
+        transition: margin 0.5s;
+      }
+    }
+
+    div[class^="container"]:not(div[class*="bannerVisible_"])
+      > div[class^="animatedContainer"] {
+      opacity: 0.35 !important;
+      height: 138px;
+
+      > div[class^="bannerImage"] {
+        margin-top: -12px;
+      }
+    }
+  }
+}
+
+// Various Reduced motion fixes
+html.reduce-motion {
+  // Remove typing dots
+  [class^="typing"] [class^="typingDots"] > svg {
+    display: none;
+  }
+
+  // remove soundboard sparkles (for everyone)
+  @at-root {
+    section[class^="panels"] div[class^="sparkleContainer"] {
+      display: none;
+    }
+  }
+}
+
+// Shrink codeblocks to only be as wide as necessary
+div[class^="markup"] code {
+  width: fit-content;
+}
+
+// Make members list fill all the way to the bottom of the screen
+div[class^="membersWrap"] {
+  min-height: 100%;
+}
+
+// Remove 1st message sticker button in DMs
+div[class^="scrollerContent"] div[class^="containerExpanded"] {
+  display: none;
+}
+
+// Remove Gift and Sticker buttons
+/* wack because of vencord's silent typing adding a button
+to this and shifting everything over otherwise */
+div[class^="channelTextArea"] {
+  div[class^="buttons"] {
+    &:has(div[style="display: flex;"]) {
+      & > :nth-child(1),
+      & > :nth-child(4) {
+        display: none;
+      }
+    }
+    &:not(:has(div[style="display: flex;"])) {
+      & > :nth-child(1),
+      & > :nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}
+
+// Reshrink new messages bar
+[class^="chatContent"] [class^="newMessagesBar"] {
+  height: 16px;
+}
+
+// Thanos super reactions
+/* idk stole from vencord server at 3am */
+[aria-label^="Add Super Reaction"],
+#message-add-reaction-1,
+#super-reaction-picker-tab,
+[class^="burstEmojiSection_"],
+[aria-label^="Reaction Picker Categories"],
+[class^="reactionDefault_"][aria-label*="super reaction"],
+[class^="reactionSelected_"][aria-label*="super reaction"],
+[class^="reactions_"] > div > [style*="background:"] {
+  display: none !important;
+}
+
+// Rising file attachment animation
+html:not(.reduce-motion)
+  div[class^="scrollableContainer"]
+  ul[class^="channelAttachmentArea"] {
+  animation-name: attachmentAnimation;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes attachmentAnimation {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 218px;
+  }
+}
+
+// Collapsible search bar
+html:not(.reduce-motion) {
+  section[class^="title"]
+    div[class^="toolbar"]
+    div[class^="search"]
+    div[class^="searchBar"] {
+    div[class^="iconContainer"] {
+      width: 24px !important;
+      height: 24px;
+      cursor: pointer !important;
+    }
+
+    &,
+    svg {
+      color: var(--color-text);
+      width: 24px;
+      height: 24px;
+      padding: 0.5px;
+    }
+
+    background: none !important;
+    width: 24px;
+    color: var(--color-text);
+    transition: width 0.2s, padding 0.5s;
+    padding: 0;
+  }
+
+  section[class^="title"]
+    div[class^="toolbar"]
+    div[class*="open_"]
+    div[class^="searchBar"] {
+    width: 300px !important;
+    padding: 0 10px !important;
+
+    svg {
+      color: var(--text-muted);
+      transform: scale(0.8);
+    }
+  }
+}
+
+// Force emoji picker icon to be :pleading_face:
+button[class^="emojiButton"] div[class^="sprite"],
+button[class^="emojiButton"] div[class^="sprite"]:hover {
+  background: url("https://toxicaven.dev/pleading.svg") no-repeat;
+  background-position: unset !important;
+  background-size: unset !important;
+}
+
+// Gradient discord logo
+html {
+  div[class^="tutorialContainer"] div[class^="childWrapper"] {
+    background: $brand;
+
+    svg path {
+      fill: $crust !important;
+    }
+  }
+
+  &.full-motion div[class^="tutorialContainer"] div[class^="childWrapper"] {
+    background: linear-gradient(-45deg, $peach, $red, $sky, $green);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+// Round spotify album covers
+div[class^="userPopoutInner"]
+  div[class^="activityUserPopoutV2"]
+  img[class*="assetsLargeImageSpotify_"] {
+  border-radius: 8px;
+}
+
+// Vencord spotify tweaks
+html.full-motion section[class^="panels"] {
+  div#vc-spotify-player {
+    div.vc-spotify-button-row {
+      position: relative !important;
+      will-change: height;
+      height: 0;
+      opacity: 0;
+      transition: height 0.2s, opacity 0.4s, position 0s;
+    }
+
+    &:hover div.vc-spotify-button-row {
+      position: flex !important;
+      height: 32px;
+      opacity: 1;
+    }
+  }
+
+  div[class^="container"] {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+section[class^="panels"] {
+  div#vc-spotify-player {
+    div[class^="barFill"] {
+      background: $brand;
+    }
+  }
+
+  button.vc-spotify-shuffle-off svg,
+  button.vc-spotify-repeat-off svg {
+    fill: $surface1 !important;
+  }
+}
+
+// Typing indicators
+[class^="dots"] {
+  color: $crust;
+}
+
+// Fix markdown margins
+[class*="markup_"] {
+  h1 {
+    margin: 25px 0 7px;
+  }
+
+  h2 {
+    margin: 20px 0 7px;
+  }
+
+  li {
+    margin: 0;
+  }
+}
+
+// Make the video download button transparent
+div[class^="mediaAttachmentsContainer"] {
+  &,
+  div[class*="oneByOneGridSingle_"] {
+    border-radius: 2px;
+  }
+
+  div[class^="hoverButtonGroup"] {
+    background: none;
+  }
+}
+
+// fix ugly audio/file containers
+div[class^="nonVisualMediaItem"] {
+  div[class^="attachment"][class*="newMosaicStyle_"] {
+    padding: 10px 20px !important;
+    width: fit-content;
+  }
+
+  div[class^="wrapperAudio"][class*="newMosaicStyle_"] {
+    padding: 10px 20px !important;
+    width: 250px;
+  }
+
+  div[class^="hoverButtonGroup"] {
+    background: none;
+  }
+}
+
+// Mac os style window buttons for windows
+[class^="typeWindows"] {
+  &[class*="withFrame_"] {
+    height: 20px;
+  }
+
+  [class*="winButton_"] {
+    top: 0;
+    width: 12px;
+    height: 12px;
+    margin: 2px 12px 0px 0px;
+    border-radius: 12px;
+
+    > svg {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      height: 12px;
+      width: 12px;
+      border-radius: 12px;
+    }
+  }
+
+  [class*="winButtonClose_"]::after {
+    background-color: $red !important;
+  }
+
+  [class*="winButtonMinMax_"] {
+    &:nth-child(3)::after {
+      background-color: $green !important;
+    }
+
+    &:nth-child(4)::after {
+      background-color: $yellow !important;
+    }
+  }
+
+  > div:hover::after {
+    transform: scale(1.1);
+  }
+
+  > div:active::after {
+    transform: scale(1);
+  }
+}
+
+// Centered emojis in user popouts
+div[class^="userPopoutInner"]
+  div[class*="customStatusSection_"]
+  img[class*="customStatusSoloEmoji_"] {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+// remove AI Channel emojis
+div[class^="channelEmoji"] {
+  display: none;
+}
+
+// remove Nitro and Shop tag in friends menu
+nav[class^="privateChannels"] {
+  ul > li:nth-child(3),
+  ul > li:nth-child(4) {
+    display: none;
+  }
+}
+
+// Keep the gif favorites button on the right
+div[class^="message"]
+  div[class^="imageContainer"]
+  div[class^="imageAccessory"] {
+  left: unset;
+  right: 6px;
+}
+
+// Non-invasive connection problems modal
+[class*="container"][class*="fixClipping"] {
+  background: transparent;
+  pointer-events: none;
+
+  [class*="anchor_"] {
+    pointer-events: auto;
+  }
+
+  img,
+  video,
+  [class*="ready_"],
+  [class*="content_"] [class*="text_"] {
+    display: none;
+  }
+
+  [class*="problems_"] {
+    padding: 8px 16px;
+    bottom: 18px;
+    left: unset;
+    right: 18px;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--background-floating);
+    border-radius: 8px;
+    -webkit-box-shadow: var(--elevation-stroke), var(--elevation-medium);
+    box-shadow: var(--elevation-stroke), var(--elevation-medium);
+  }
+}
+
+// Remove extra text from emoji hover tooltip
+[class*="tooltip_"] [class*="text-sm-normal_"][class*="clickCTA_"] {
+  display: none;
+}
+
+// Wavy spotify
+/* Credit to https://github.com/Comfy-Themes/Discord */
+html:not(.reduce-motion) [class*="userPopoutOuter_"] [class*="activity_"] {
+  --wave-width: 268px;
+  padding: 16px;
+  margin-top: 25px;
+  z-index: 1;
+
+  [class*="text_"],
+  [class*="textRow_"],
+  [class*="anchor_"],
+  [class*="activityName_"],
+  [class*="headerText_"] {
+    color: var(--profile-body-background-color) !important;
+  }
+
+  [class*="buttonColor_"] {
+    border: none;
+    background-color: $base;
+    box-shadow: 0 4px 15px #00000021;
+    color: #{$text};
+  }
+
+  [class*="headerTextNormal_"]::before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    z-index: 1;
+    width: var(--wave-width);
+    top: -25px;
+    left: 0;
+    background: var(--background-secondary);
+    background: var(--profile-gradient-primary-color);
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="284" height="25" viewBox="0 0 284 25"><path d="M283.999 15.2776C228.798 15.2776 211.243 -0.0317305 140.048 -0.000164877C69.0475 -0.000164877 51.2975 15.2776 8.58307e-06 15.2776V24.9998H284C284 24.9998 283.999 18.9392 283.999 15.2776Z"/></svg>');
+    animation: animate2 8s linear infinite;
+    animation-delay: 0s;
+    opacity: 1;
+
+    @keyframes animate2 {
+      0% {
+        -webkit-mask-position-x: var(--wave-width);
+      }
+
+      100% {
+        -webkit-mask-position-x: 0;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    left: 0;
+    top: 0;
+    background: $brand;
+    border-radius: 0 0 10px 10px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 25px;
+    z-index: 2;
+    width: var(--wave-width);
+    top: -24px;
+    left: 0;
+    background: $brand;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="284" height="25" viewBox="0 0 284 25"><path d="M283.999 15.2776C228.798 15.2776 211.243 -0.0317305 140.048 -0.000164877C69.0475 -0.000164877 51.2975 15.2776 8.58307e-06 15.2776V24.9998H284C284 24.9998 283.999 18.9392 283.999 15.2776Z"/></svg>');
+    animation: animate 6s linear infinite;
+    animation-delay: 0s;
+    opacity: 1;
+  }
+
+  [class*="timeBarUserPopoutV2_"] {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      background: $green;
+      border-radius: 0 0 10px 10px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 25px;
+      width: var(--wave-width);
+      top: -24px;
+      left: 0;
+      z-index: 3;
+      background: $green;
+      -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="284" height="25" viewBox="0 0 284 25"><path d="M283.999 15.2776C228.798 15.2776 211.243 -0.0317305 140.048 -0.000164877C69.0475 -0.000164877 51.2975 15.2776 8.58307e-06 15.2776V24.9998H284C284 24.9998 283.999 18.9392 283.999 15.2776Z"/></svg>');
+      animation: animate 6s linear infinite;
+      animation-delay: 0s;
+
+      @keyframes animate {
+        0% {
+          -webkit-mask-position-x: 0;
+        }
+
+        100% {
+          -webkit-mask-position-x: var(--wave-width);
+        }
+      }
+    }
+
+    [class*="barInner_"] {
+      background-color: var(--profile-body-background-color);
+    }
+  }
+
+  [class*="platformIcon_"] {
+    display: none;
+  }
+
+  [class*="headerText_"] {
+    --header-primary: $base;
+  }
+}
+
+// Darken delete icon on hover
+[class^="hoverButton"]:not([class^="anchor"]):hover > svg {
+  color: $base;
+}
+
+// Revert pleading face
+/* Credit to Niko's trans UK flag code :3 https://github.com/XWasHere/sane-discord/ */
+[class^="inspector"] img[alt="\:pleading_face\:"],
+[data-type="emoji"]:is(
+    [data-name="\:pleading_face\:"],
+    [data-name="pleading_face"]
+  ) {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("https://toxicaven.dev/pleading.svg") no-repeat;
+
+  width: 1.375em;
+  height: 1.375em;
+  padding-left: 1.375em;
+
+  &:is(img) {
+    width: 22px;
+    height: 22px;
+    padding-left: 22px;
+  }
+
+  &.jumboable {
+    width: 3rem;
+    height: 3rem;
+    padding-left: 3rem;
+  }
+
+  &[class*="emojiItemMedium_"] {
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+  }
+
+  div[class^="emojiSpriteImage"] {
+    display: none;
+  }
+}
+
+img[src="/assets/3b12ba6d109c8d34cddc.svg"] {
+  content: url("https://toxicaven.dev/pleading.svg") !important;
+}
+
+// Show edit timestamps on edited messages
+[class^="message"] [class^="contents"] {
+  div:not(div.messagelogger-edited)
+    > span[class*="timestamp_"]:not(
+      [class*="timestampInline_"],
+      [class*="timestampVisibleOnHover_"],
+      [class*="CompactTimeStamp_"]
+    )
+    time::after {
+    content: " (" attr(aria-label) ")";
+    color: var(--text-muted);
+    font-size: 0.625rem;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: lowercase;
+  }
+
+  span[class^="edited"] {
+    display: none;
+  }
+}
+
+// Revert mentions having a slightly bigger line width
+div[class^="message"] div[class^="contents"] [class*="messageContent_"] {
+  span.mention,
+  span.channelMention {
+    line-height: 1.2rem;
+  }
+}
+
+// Better nitro id badge
+[class^="nitroBadgeSvg"] {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cg%3E%3Cpath d='M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z' fill='rgb(137, 180, 250)'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  margin-left: 0.1rem;
+  width: 1.25rem;
+  top: 0.25rem;
+  height: 1.25rem;
+  margin-right: -0.3rem;
+}
+
+// remove user popout AKA section
+div[class^="userPopoutOuter"]
+  div[class*="usernameSection_"]
+  div[class^="container"],
+div[class^="userProfileModalOuter"]
+  div[class^="container"]
+  div[class^="container"] {
+  display: none;
+}
+
+// Revert Mosaic images
+/* Original code by Teltta#2064 */
+[class*="ByOneGrid_"]:not([class*="OneGridSingle_"]),
+[class*="ByTwoGrid_"],
+[class*="ByThreeGrid_"] {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+
+  [class*="lazyImg"] {
+    aspect-ratio: unset;
+    height: auto !important;
+    width: auto !important;
+    margin-left: 0px !important;
+  }
+}
+
+[class*="mediaAttachmentsContainer_"] {
+  border-radius: 0px;
+
+  [class*="messageAttachmentMediaMosaic_"] {
+    max-width: fit-content;
+  }
+}
+
+[class*="OneGridSingle_"] {
+  border-radius: 3px;
+}
+
+[class*="ByOneGrid_"]:not([class*="OneGridSingle_"]),
+[class*="ByTwoGrid_"],
+[class*="ByThreeGrid_"] {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+}
+[class*="ByOneGrid_"]:not([class*="OneGridSingle_"]) [class*="lazyImg"],
+[class*="ByTwoGrid_"] [class*="lazyImg"],
+[class*="ByThreeGrid_"] [class*="lazyImg"] {
+  aspect-ratio: unset;
+  height: auto !important;
+  width: auto !important;
+  margin-left: 0px !important;
+}
+
+// File upload progress should use accent
+div[class^="attachment"]
+  div[class^="progressContainer"]
+  div[class^="progressBar"] {
+  background-color: $brand !important;
+}
+
+// Message reply bar ping toggle should use accent
+div[class^="replyBar"] div[aria-checked="true"] div {
+  color: $brand !important;
+}
+
+// Remove the help button in the top right
+section[class^="title"] div[class^="toolbar"] a[class^="anchor"] {
+  display: none;
+}
+
+// call region padding
+[class^="callContainer"] [class^="topControls"] [class^="flex"]:first-child {
+  padding-top: 8px;
+}
+
+// unthemed borders on image uploads
+div[class^="uploadContainer"] div[class^="spoilerWrapper"] {
+  background-color: $mantle;
+}
+
+// not matchy hljs codeblock background
+.hljs {
+  background-color: $mantle !important;
+}
+
+// Custom font codeblocks
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+
+:root {
+  --code-font: "Jetbrains Mono";
+}
+
+[class^="markdown"] [class^="codeInline"],
+[class^="codeLine"],
+[class^="codeBlockText"],
+[class^="durationTimeDisplay"],
+[class^="durationTimeSeparator"],
+[class*="after_inlineCode_"],
+[class*="before_inlineCode_"],
+[class^="inlineCode"],
+code.inline,
+code,
+section[class^="panels"] div[class^="inner"] span, // vencord time elapsed
+.hljs {
+  font-family: var(--code-font), var(--font-code) !important;
+}

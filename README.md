@@ -1,7 +1,7 @@
 <h3 align="center">
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-	Catppuccin for <a href="https://discord.com/">Discord</a>
+	Catppuccin for <a href="https://discord.com/">Discord</a> (Aven's fork)
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
 </h3>
 
@@ -52,25 +52,47 @@
 
 ```css
 /* latte */
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-latte.theme.css");
+@import url("https://toxicaven.dev/theme/catppuccin-latte.theme.css");
 /* frappe */
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-frappe.theme.css");
+@import url("https://toxicaven.dev/theme/catppuccin-frappe.theme.css");
 /* macchiato */
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-macchiato.theme.css");
+@import url("https://toxicaven.dev/theme/catppuccin-macchiato.theme.css");
 /* mocha */
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css");
+@import url("https://toxicaven.dev/theme/catppuccin-mocha.theme.css");
 
 /* You can also append Catppuccin colors to customize the accent, e.g. */
 /* mocha (pink accent)*/
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-pink.theme.css");
+@import url("https://toxicaven.dev/theme/catppuccin-mocha-pink.theme.css");
 /* frappe (maroon accent) */
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-frappe-maroon.theme.css");
+@import url("https://toxicaven.dev/theme/catppuccin-frappe-maroon.theme.css");
+```
+
+### [DiscoCSS](https://github.com/mlvzk/discocss)
+
+1. Follow the instructions from [DiscoCSS](https://github.com/mlvzk/discocss#installation) to install DiscoCSS.
+2. Use your preferred flavour as your DiscoCSS `custom.css`
+
+```bash
+# latte
+curl -L https://toxicaven.dev/theme/catppuccin-latte.theme.css > ~/.config/discocss/custom.css
+# frappe
+curl -L https://toxicaven.dev/theme/catppuccin-frappe.theme.css > ~/.config/discocss/custom.css
+# macchiato
+curl -L https://toxicaven.dev/theme/catppuccin-macchiato.theme.css > ~/.config/discocss/custom.css
+# mocha
+curl -L https://toxicaven.dev/theme/catppuccin-mocha.theme.css > ~/.config/discocss/custom.css
+
+# You can also append Catppuccin colors to customize the accent, e.g.
+# mocha (pink accent)
+curl -L https://toxicaven.dev/theme/catppuccin-mocha-pink.theme.css > ~/.config/discocss/custom.css
+# frappe (maroon accent)
+curl -L https://toxicaven.dev/theme/catppuccin-frappe-maroon.theme.css > ~/.config/discocss/custom.css
 ```
 
 ### [Stylus](https://github.com/openstyles/stylus)
 
 1. Enable CSP Patching from Stylus Settings > Advanced.
-2. [Click here to install](https://github.com/catppuccin/discord/raw/main/discord.user.css).
+2. [Click here to install](https://github.com/ToxicAven/discord/raw/personal/discord.user.css)
 3. Choose your preferred flavour and accent color from the Stylus preference dropdown.
 
 ## 🙋 FAQ
@@ -82,10 +104,8 @@
 - A: The following snippet showcases a configuration that switches between latte in light mode and mocha in dark mode by adding an inline [`prefers-color-scheme` media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme), `(prefers-color-scheme: <light-or-dark>)`, after each `@import` statement (see ["Importing CSS rules conditional on media queries" - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@import#importing_css_rules_conditional_on_media_queries)).
 
   ```css
-  @import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css")
-  (prefers-color-scheme: dark);
-  @import url("https://catppuccin.github.io/discord/dist/catppuccin-latte.theme.css")
-  (prefers-color-scheme: light);
+  @import url("https://toxicaven.dev/theme/catppuccin-mocha.theme.css") (prefers-color-scheme: dark);
+  @import url("https://toxicaven.dev/theme/catppuccin-latte.theme.css") (prefers-color-scheme: light);
   ```
 
 ## 💝 Thanks to
