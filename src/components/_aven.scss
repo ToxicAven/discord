@@ -934,6 +934,11 @@ div[class^="uploadContainer"] div[class^="spoilerWrapper"] {
   background-color: $mantle !important;
 }
 
+// remove app launcher
+div[class^="channelAppLauncher"] {
+  display: none;
+}
+
 // Custom font codeblocks
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
