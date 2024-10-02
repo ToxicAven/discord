@@ -11,6 +11,11 @@ div[class^="threadSuggestionBar"] {
   display: none;
 }
 
+// Get rid of the hoisted discover button
+[class*="guilds_"] [class^="footer_"] {
+  display: none;
+}
+
 // Remove chat mod tag
 span[class^="botTag"] {
   &[data-tag="app • chat mod"] span[class^="botText"] {
@@ -583,12 +588,14 @@ div[class^="channelEmoji"] {
 }
 
 // remove Nitro and Shop tag in friends menu
+/*
 nav[class^="privateChannels"] {
   ul > li:nth-child(3),
   ul > li:nth-child(4) {
     display: none;
   }
 }
+*/
 
 // Keep the gif favorites button on the right
 div[class^="message"]
