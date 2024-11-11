@@ -20,6 +20,11 @@ button[class*="emojiButtonNormal"] > div > div {
   filter: grayscale(0.77) hue-rotate(185deg) brightness(1.02) opacity(100%) !important;
 }
 
+:root .theme-light {
+  @import "@catppuccin/palette/scss/latte";
+  @import "components/lightfix";
+}
+
 @import "theme";
 .theme-dark {
   @include theme.highlights("mocha", "hex");
