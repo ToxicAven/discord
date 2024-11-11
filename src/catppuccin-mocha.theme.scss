@@ -27,5 +27,5 @@ button[class*="emojiButtonNormal"] > div > div {
 
 @import "theme";
 .theme-dark {
-  @include theme.highlights("mocha", "hex");
+  @include theme.highlights("mocha");
 }

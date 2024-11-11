@@ -27,5 +27,5 @@ button[class*="emojiButtonNormal"] > div > div {
 
 @import "theme";
 .theme-dark {
-  @include theme.highlights("frappe", "hex");
+  @include theme.highlights("frappe");
 }
