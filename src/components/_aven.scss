@@ -41,8 +41,8 @@ span[class^="botTag"] {
   content: "";
   width: 32px;
   height: 32px;
-  bottom: calc(100% - 3px);
-  right: 10px;
+  top: -32px;
+  left: calc(100% - 35px);
   position: absolute;
   image-rendering: pixelated;
   background-image: url("https://raw.githubusercontent.com/adryd325/oneko.js/main/oneko.gif");
@@ -376,7 +376,9 @@ html:not(.reduce-motion) {
     background: none !important;
     width: 24px;
     color: var(--color-text);
-    transition: width 0.2s, padding 0.5s;
+    transition:
+      width 0.2s,
+      padding 0.5s;
     padding: 0;
   }
 
@@ -448,7 +450,10 @@ html.full-motion section[class^="panels"] {
       will-change: height;
       height: 0;
       opacity: 0;
-      transition: height 0.2s, opacity 0.4s, position 0s;
+      transition:
+        height 0.2s,
+        opacity 0.4s,
+        position 0s;
     }
 
     &:hover div.vc-spotify-button-row {
