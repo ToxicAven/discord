@@ -831,7 +831,7 @@ img[src="/assets/3b12ba6d109c8d34cddc.svg"] {
     text-transform: lowercase;
   }
 
-  span[class^="edited"] {
+  span[class*="edited"] {
     display: none;
   }
 }
