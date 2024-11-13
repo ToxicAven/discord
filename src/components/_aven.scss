@@ -772,11 +772,6 @@ html:not(.reduce-motion) [class*="userPopoutOuter_"] [class*="activity_"] {
   }
 }
 
-// Darken delete icon on hover
-[class^="hoverButton"]:not([class^="anchor"]):hover > svg {
-  color: $base;
-}
-
 // Revert pleading face
 /* Credit to Niko's trans UK flag code :3 https://github.com/XWasHere/sane-discord/ */
 [class^="inspector"] img[alt="\:pleading_face\:"],
