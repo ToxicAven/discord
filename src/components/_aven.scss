@@ -299,6 +299,7 @@ div[class^="scrollerContent"] div[class^="containerExpanded"] {
 // Remove Gift and Sticker buttons
 /* wack because of vencord's silent typing adding a button
 to this and shifting everything over otherwise */
+/*
 div[class^="channelTextArea"] {
   div[class^="buttons"] {
     &:has(div[style="display: flex;"]) {
@@ -315,6 +316,7 @@ div[class^="channelTextArea"] {
     }
   }
 }
+*/
 
 // Reshrink new messages bar
 [class^="chatContent"] [class^="newMessagesBar"] {
