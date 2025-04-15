@@ -1,18 +1,103 @@
 // Revert gg sans
 @import "font";
 
+// Revert bits of the new UI
+/* Thanks Niko!!!! */
+
+/* Remove titlebar */
+&.platform-linux {
+  --custom-app-top-bar-height: 0px !important;
+
+  div[class^="bar_"] {
+    display: none !important;
+    min-height: 0px !important;
+  }
+}
+
+/* Add margin to top of guild list */
+[class^="tutorialContainer_"] {
+  padding-top: 8px;
+  border-top: 1px solid var(--app-border-frame);
+}
+
+/* Fix user profile button */
+[class^="sidebar_"] {
+  width: calc(var(--custom-guild-sidebar-width) + 1px) !important;
+
+  &:after {
+    display: none;
+  }
+
+  > [class^="wrapper_"] {
+    margin-bottom: 0px;
+  }
+
+  [class^="scroller_"] {
+    margin-bottom: calc(var(--custom-app-panels-height, 0));
+  }
+
+  > [class^="panels_"] {
+    grid-area: channelsList;
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    border-left: 1px solid var(--app-border-frame);
+    border-right: 0px;
+    border-bottom: 0px;
+    border-radius: 0px;
+  }
+
+  #channels {
+    margin-bottom: 0px;
+  }
+}
+
+/* Remove rounding from sidebar */
+[class^="sidebarList_"] {
+  border-top-left-radius: 0 !important;
+}
+
+/* Fix insane padding in channel titlebar */
+[class^="title_"] {
+  padding-left: var(--space-8) !important;
+}
+
+/* Fix message bar 
+[class^=form_] {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  
+  [class^=channelTextArea_] {
+      border-left: 0px;
+      border-right: 0px;
+      border-bottom: 0px;
+      border-radius: 0px;
+      
+      margin-bottom: 0px;
+      
+      [class^=scrollableContainer_] {
+          padding-top: 2px;
+          padding-bottom: 2px;
+      }
+  }
+}
+*/
+
 // bottom message padding + better typing indicator
 div[class^="channelTextArea_"] {
   margin-top: 10px;
   margin-bottom: 28px;
 }
 
+// Make typing indicator bigger
 div[class^="typing_"] {
-    font-size: 16px !important;
-    svg {
-        width: 26px !important;
-        height: 8px !important;
-    }
+  font-size: 16px !important;
+  svg {
+    width: 26px !important;
+    height: 8px !important;
+  }
 }
 
 // Hide New member name badge
@@ -39,7 +124,7 @@ div[class^="threadSuggestionBar"] {
   animation: neko 1s infinite;
 }
 
-html.reduce-motion
+&.reduce-motion
   :not(div[class^="userPopoutInner"])
   div[class^="channelTextArea_"]::before {
   animation: none;
@@ -71,7 +156,7 @@ div[class^="premiumLabel"] svg,
 
 // Theme info in client version area
 nav[class^="sidebar"] div[class^="info"]::before {
-  content: "Catppuccin Aven ";// + $version;
+  content: "Catppuccin Aven "; // + $version;
   color: $subtext0;
   font-size: 12px;
   line-height: 16px;
@@ -87,7 +172,7 @@ nav[class^="sidebar"] div[class^="info"]::before {
 //div[class*="nameTagSmall"] span:only-child:before,
 div[class^="hoverRoll"] div[class^="hovered"]:before,
 span[class^="userTagUsername_"]:before {
-//div[class^="userMenuUsername"] div[class*="userMenuText_"]:before {
+  //div[class^="userMenuUsername"] div[class*="userMenuText_"]:before {
   content: "@";
 }
 
@@ -141,7 +226,6 @@ div[class^="descriptionClamp"] {
   }
 }
 
-
 // Roll pill inherits color from role circle
 /*
 [class^="role"] {
@@ -175,7 +259,7 @@ div[class^="descriptionClamp"] {
 */
 
 // Collapsing sidebar header banner
-html:not(.reduce-motion) {
+&:not(.reduce-motion) {
   div[class^="sidebar"] nav[class^="container"] {
     div[class^="animatedContainer"] {
       opacity: 1 !important;
@@ -199,7 +283,7 @@ html:not(.reduce-motion) {
 }
 
 // Various Reduced motion fixes
-html.reduce-motion {
+&.reduce-motion {
   // Remove typing dots
   [class^="typing"] [class^="typingDots"] > svg {
     display: none;
@@ -242,7 +326,7 @@ div[class^="scrollerContent"] div[class^="containerExpanded"] {
 }
 
 // Rising file attachment animation
-html:not(.reduce-motion)
+&:not(.reduce-motion)
   div[class^="scrollableContainer"]
   ul[class^="channelAttachmentArea"] {
   animation-name: attachmentAnimation;
@@ -270,7 +354,7 @@ button[class^="emojiButton"] div[class^="sprite"]:hover {
 }
 
 // Gradient discord logo
-html {
+& {
   div[class^="tutorialContainer"] div[class^="childWrapper"] {
     background: $brand;
 
@@ -301,7 +385,7 @@ html {
 }
 
 // Vencord spotify tweaks
-html.full-motion section[class^="panels"] {
+&.full-motion section[class^="panels"] {
   div#vc-spotify-player {
     div.vc-spotify-button-row {
       position: relative !important;
