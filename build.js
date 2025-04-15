@@ -41,8 +41,8 @@ async function generateAccents(sourceFilePath) {
   });
   return Promise.all(
     accents.map((accent) =>
-      generateAccent(sourceFileData, sourceFilePath, accent)
-    )
+      generateAccent(sourceFileData, sourceFilePath, accent),
+    ),
   );
 }
 

@@ -15,17 +15,23 @@
 $brand: $blue;
 $type: ".theme-dark";
 $version: "dev";
+.theme-dark,
+.visual-refresh.theme-dark,
+.visual-refresh .theme-dark {
+  $brand: $blue;
 
-button[class*="emojiButtonNormal"] > div > div {
-  filter: grayscale(0.77) hue-rotate(185deg) brightness(1.015) opacity(100%) !important;
-}
+  @import "components/contrast-dark";
+  @import "theme";
 
-:root .theme-light {
-  @import "@catppuccin/palette/scss/latte";
-  @import "components/lightfix";
-}
-
-@import "theme";
-.theme-dark {
   @include theme.highlights("frappe");
+}
+
+.theme-light,
+.visual-refresh.theme-light,
+.visual-refresh .theme-light {
+  @import "@catppuccin/palette/scss/latte";
+  $brand: $blue;
+
+  @import "components/tweak-light";
+  @import "theme";
 }
