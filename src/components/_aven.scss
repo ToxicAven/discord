@@ -385,6 +385,7 @@ button[class^="emojiButton"] div[class^="sprite"]:hover {
 }
 
 // Vencord spotify tweaks
+/*
 &.full-motion section[class^="panels"] {
   div#vc-spotify-player {
     div.vc-spotify-button-row {
@@ -423,6 +424,7 @@ section[class^="panels"] {
     fill: $surface1 !important;
   }
 }
+*/
 
 // fix ugly audio/file containers
 div[class^="nonVisualMediaItem"] {
@@ -583,7 +585,7 @@ div[class^="uploadContainer"] div[class^="spoilerWrapper"] {
 // Custom font codeblocks
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
-:root {
+@at-root :root {
   --code-font: "Jetbrains Mono";
 }
 
