@@ -5,7 +5,7 @@
 /* Thanks Niko!!!! */
 
 /* Remove titlebar */
-&.platform-linux {
+html.platform-linux {
   --custom-app-top-bar-height: 0px !important;
 
   div[class^="bar_"] {
@@ -124,7 +124,7 @@ div[class^="threadSuggestionBar"] {
   animation: neko 1s infinite;
 }
 
-&.reduce-motion
+html.reduce-motion
   :not(div[class^="userPopoutInner"])
   div[class^="channelTextArea_"]::before {
   animation: none;
@@ -259,7 +259,7 @@ div[class^="descriptionClamp"] {
 */
 
 // Collapsing sidebar header banner
-&:not(.reduce-motion) {
+html:not(.reduce-motion) {
   div[class^="sidebar"] nav[class^="container"] {
     div[class^="animatedContainer"] {
       opacity: 1 !important;
@@ -283,7 +283,7 @@ div[class^="descriptionClamp"] {
 }
 
 // Various Reduced motion fixes
-&.reduce-motion {
+html.reduce-motion {
   // Remove typing dots
   [class^="typing"] [class^="typingDots"] > svg {
     display: none;
@@ -326,7 +326,7 @@ div[class^="scrollerContent"] div[class^="containerExpanded"] {
 }
 
 // Rising file attachment animation
-&:not(.reduce-motion)
+html:not(.reduce-motion)
   div[class^="scrollableContainer"]
   ul[class^="channelAttachmentArea"] {
   animation-name: attachmentAnimation;
@@ -354,20 +354,19 @@ button[class^="emojiButton"] div[class^="sprite"]:hover {
 }
 
 // Gradient discord logo
-& {
-  div[class^="tutorialContainer"] div[class^="childWrapper"] {
-    background: $brand;
 
-    svg path {
-      fill: $crust !important;
-    }
-  }
+div[class^="tutorialContainer"] div[class^="childWrapper"] {
+  background: $brand;
 
-  &.full-motion div[class^="tutorialContainer"] div[class^="childWrapper"] {
-    background: linear-gradient(-45deg, $peach, $red, $sky, $green);
-    background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
+  svg path {
+    fill: $crust !important;
   }
+}
+
+html.full-motion div[class^="tutorialContainer"] div[class^="childWrapper"] {
+  background: linear-gradient(-45deg, $peach, $red, $sky, $green);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
 }
 
 @keyframes gradientBG {
@@ -585,7 +584,7 @@ div[class^="uploadContainer"] div[class^="spoilerWrapper"] {
 // Custom font codeblocks
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
-@at-root :root {
+:root {
   --code-font: "Jetbrains Mono";
 }
 
