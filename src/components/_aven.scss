@@ -156,7 +156,7 @@ div[class^="premiumLabel"] svg,
 
 // Theme info in client version area
 nav[class^="sidebar"] div[class^="info"]::before {
-  content: "Catppuccin Aven "; // + $version;
+  content: "Catppuccin Aven " + $version;
   color: $subtext0;
   font-size: 12px;
   line-height: 16px;
