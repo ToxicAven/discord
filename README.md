@@ -108,6 +108,14 @@ curl -L https://toxicaven.dev/theme/catppuccin-frappe-maroon.theme.css > ~/.conf
   @import url("https://toxicaven.dev/theme/catppuccin-latte.theme.css") (prefers-color-scheme: light);
   ```
 
+- Q: **_"Can I disable Rainbow Threads"_**
+- A: Yes, by placing the following in your QuickCSS threads will be the same colour as typical channels. *note: please respect the `space` between the colon and semi-colon*
+  ```css
+  :root {
+    --ctp-rainbow-thread-disabled: ;
+  }
+  ```
+
 ## 💝 Thanks to
 
 - [GlowingUmbreon](https://github.com/glowingumbreon)
