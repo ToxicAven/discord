@@ -347,7 +347,7 @@ html:not(.reduce-motion)
 // Force emoji picker icon to be :pleading_face:
 button[class^="emojiButton"] div[class^="sprite"],
 button[class^="emojiButton"] div[class^="sprite"]:hover {
-  background: url("https://toxicaven.dev/pleading.svg") no-repeat;
+  background: url("https://toxicaven.dev/assets/pleading.svg") no-repeat;
   background-position: unset !important;
   background-size: unset !important;
   filter: grayscale(0.77) hue-rotate(185deg) brightness(1.02) opacity(100%) !important;
@@ -504,7 +504,7 @@ div[class^="message"]
   ) {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: url("https://toxicaven.dev/pleading.svg") no-repeat;
+  background: url("https://toxicaven.dev/assets/pleading.svg") no-repeat;
 
   width: 1.375em;
   height: 1.375em;
@@ -534,7 +534,7 @@ div[class^="message"]
 }
 
 img[src="/assets/059679850d492e83.svg"] {
-  content: url("https://toxicaven.dev/pleading.svg") !important;
+  content: url("https://toxicaven.dev/assets/pleading.svg") !important;
 }
 
 // Show edit timestamps on edited messages
