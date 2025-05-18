@@ -15,7 +15,6 @@
 $brand: $blue;
 $type: ".theme-light";
 $version: "dev";
-.theme-dark,
 .visual-refresh.theme-dark,
 .visual-refresh .theme-dark {
   @import "@catppuccin/palette/scss/frappe";
@@ -25,7 +24,6 @@ $version: "dev";
   @import "theme";
 }
 
-.theme-light,
 .visual-refresh.theme-light,
 .visual-refresh .theme-light {
   $brand: $blue;

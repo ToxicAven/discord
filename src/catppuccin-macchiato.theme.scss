@@ -15,7 +15,6 @@
 $brand: $blue;
 $type: ".theme-dark";
 $version: "dev";
-.theme-dark,
 .visual-refresh.theme-dark,
 .visual-refresh .theme-dark {
   $brand: $blue;
@@ -26,7 +25,6 @@ $version: "dev";
   @include theme.highlights("macchiato");
 }
 
-.theme-light,
 .visual-refresh.theme-light,
 .visual-refresh .theme-light {
   @import "@catppuccin/palette/scss/latte";
