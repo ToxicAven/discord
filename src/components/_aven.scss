@@ -64,26 +64,87 @@ html.platform-linux {
   padding-left: var(--space-8) !important;
 }
 
-/* Fix message bar 
-[class^=form_] {
-  padding-left: 0px !important;
-  padding-right: 0px !important;
-  
-  [class^=channelTextArea_] {
-      border-left: 0px;
-      border-right: 0px;
-      border-bottom: 0px;
-      border-radius: 0px;
-      
-      margin-bottom: 0px;
-      
-      [class^=scrollableContainer_] {
-          padding-top: 2px;
-          padding-bottom: 2px;
+// Clan tag tweaks
+/* Credit @vitroid, @its.error, @makeshift.torch */
+span[class^="chipletContainerInner_"] {
+  span {
+    span[class^="unselectable_"] {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 0;
+      will-change: max-width, margin;
+      transition: max-width 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+        margin 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    img {
+      margin-right: 0;
+      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
+        margin 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+  }
+
+  &:hover {
+    span {
+      span[class^="unselectable_"] {
+        max-width: 20ch;
+        margin-right: 0.3ch;
+        transition-delay: 0.08s;
       }
+
+      img {
+        transform: rotateZ(360deg);
+        margin-right: 0.6ch;
+        transition-delay: 0.08s;
+      }
+    }
+  }
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    pointer-events: none;
   }
 }
-*/
+
+[class^="headerText"] {
+  display: inline-flex;
+
+  > span:is([class^="username"]) {
+    order: 1;
+  }
+
+  > span:has([class^="roleIcon"]) {
+    order: 2;
+  }
+
+  > span:has([class^="chipletContainerInner"]) {
+    order: 3;
+  }
+
+  > span[style="display: none;"] {
+    order: 4;
+  }
+
+  > .vc-message-decorations-wrapper {
+    order: 5;
+  }
+
+  > span:has(> [class^="newMemberBadge"]) {
+    order: 6;
+  }
+
+  > span:is([class^="botTag"]) {
+    order: 7;
+  }
+}
 
 // bottom message padding + better typing indicator
 div[class^="channelTextArea_"] {
