@@ -68,7 +68,7 @@ html.platform-linux {
 /* Credit @vitroid, @its.error, @makeshift.torch */
 span[class^="chipletContainerInner_"] {
   span {
-    span[class^="unselectable_"] {
+    span[class^="tagText_"] {
       display: inline-block;
       white-space: nowrap;
       overflow: hidden;
@@ -87,7 +87,7 @@ span[class^="chipletContainerInner_"] {
 
   &:hover {
     span {
-      span[class^="unselectable_"] {
+      span[class^="tagText_"] {
         max-width: 20ch;
         margin-right: 0.3ch;
         transition-delay: 0.08s;
