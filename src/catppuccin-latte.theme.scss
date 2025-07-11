@@ -12,18 +12,8 @@
 @use "@catppuccin/palette/scss/latte" as *;
 @use "@catppuccin/highlightjs/sass/theme";
 
-$brand: $blue;
 $type: ".theme-light";
 $version: "dev";
-.visual-refresh.theme-dark,
-.visual-refresh .theme-dark {
-  @import "@catppuccin/palette/scss/frappe";
-  $brand: $blue;
-
-  @import "components/tweaks/dark";
-  @import "theme";
-}
-
 .visual-refresh.theme-light,
 .visual-refresh .theme-light {
   $brand: $blue;
@@ -32,6 +22,15 @@ $version: "dev";
   @import "theme";
 
   @include theme.highlights("latte");
+}
+
+.visual-refresh.theme-dark,
+.visual-refresh .theme-dark {
+  @import "@catppuccin/palette/scss/frappe";
+  $brand: $blue;
+
+  @import "components/tweaks/dark";
+  @import "theme";
 }
 
 @import "components/aven";
