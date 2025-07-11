@@ -12,6 +12,7 @@
 @use "@catppuccin/palette/scss/latte" as *;
 @use "@catppuccin/highlightjs/sass/theme";
 
+$brand: $blue;
 $type: ".theme-light";
 $version: "dev";
 .visual-refresh.theme-light,
