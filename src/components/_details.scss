@@ -1,12 +1,12 @@
-$svg-platform-colors: (
-  //online indicators (not var based)
-  $yellow: #ca9654,
-  $red: #d83a42,
-  $green: #43a25a,
-  $overlay1: #82838b,
-  "var(--twitch)": #9147ff
+// online indicators (not var based)
+$online-indicators: (
+  #45a366: $green,
+  #ffc04e: $yellow,
+  #da3e44: $red,
+  #84858d: $overlay1,
+  #9147ff: var(--twitch),
 );
-@each $var, $color in $svg-platform-colors {
+@each $color, $var in $online-indicators {
   svg [fill="#{$color}"],
   svg[fill="#{$color}"] {
     fill: #{$var};
@@ -19,18 +19,16 @@ $svg-platform-colors: (
 
 div[class^="newMessagesBar_"] {
   --white: #{$crust};
-  --button-secondary-background: var(--brand);
-  --button-secondary-background-hover: var(--brand-530);
+  --control-secondary-background-default: var(--brand-500);
+  --control-secondary-background-hover: var(--brand-530);
 }
 
-div[class^="expandedFolderBackground_"] {
+span[class^="folderGroupBackground_"] {
   --background-mod-subtle: #{$mantle} !important;
 }
 
 // Switches
-// Literally a single switch doesnt have the parent control_ class... so annoying
-// div[class^="container_"][style*="opacity: 1; background-color:"]
-div[class^="control_"] > div[class^="container_"] {
+div[class^="control_"] > div[data-toggleable-component="switch"] {
   background-color: #{$surface2} !important;
   transition: background-color 0.2s;
 
@@ -60,21 +58,21 @@ div[class^="control_"] > div[class^="container_"] {
 }
 
 // Vencord custom switches
-div[class^="vc-addon-card"] > div div[class^="container_"] {
+div.vc-switch-container {
   --primary-400: #{$surface2};
-  transition: background-color 0.2s;
-  > svg > rect {
+
+  svg.vc-switch-slider > rect {
     fill: var(--white);
     transition: fill 0.2s;
   }
 
-  &[class*="checked_"] > svg > rect {
+  &.vc-switch-checked > svg.vc-switch-slider > rect {
     fill: #{$crust};
   }
 }
 
 // system message icons
-div[class^="message"][class*="isSystemMessage"] div[class^="icon"] {
+div[class^="message_"][class*="isSystemMessage_"] div[class^="icon_"] {
   // User Joined icon
   &[style*="/assets/61ccab047dad737a.svg"] {
     @include recolor($green);
@@ -95,7 +93,7 @@ div[class^="message"][class*="isSystemMessage"] div[class^="icon"] {
   }
 }
 
-img[class*="maskIcon"][src*="/assets/c8ae30e56eb87fdf.svg"] {
+img[class*="maskIcon_"][src*="/assets/c8ae30e56eb87fdf.svg"] {
   @include recolor($crust);
 }
 
@@ -128,11 +126,12 @@ div[class^="textContentFooter_"] {
 // Forum new badge / OP tag
 div[class^="newBadge_"][class*="textBadge_"][style="background-color: var(--brand-260);"],
 span[class*="botTagOP_"] {
-  color: var(--badge-brand-text);
+  background-color: var(--brand-500) !important;
+  color: var(--white);
 }
 
 div[class^="quickSelectPopoutOption_"]:hover[role="option"] {
-  background-color: var(--background-modifier-hover);
+  background-color: var(--interactive-background-hover);
 }
 
 // VC controls
@@ -166,4 +165,12 @@ div[class*="container_"]:focus-within:has(> div[class^="inner_"] > input),
 [class*="input_"][type="text"]:not([readOnly]):focus,
 [class*="input_"][type="text"]:not([readOnly]):focus:hover {
   --text-link: var(--brand-500);
+}
+
+// Toast icons
+div[class^="toast_"][data-type="success"] {
+  --status-positive: #{$base};
+}
+div[class^="toast_"][data-type="failure"] {
+  --icon-feedback-critical: #{$base};
 }
