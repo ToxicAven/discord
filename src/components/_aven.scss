@@ -4,7 +4,7 @@
 // Revert bits of the new UI
 /* Thanks Niko!!!! */
 
-/* Remove titlebar */
+/* Remove titlebar - disabled as discord properly sets their window decorations now
 html.platform-linux {
   --custom-app-top-bar-height: 0px !important;
 
@@ -13,6 +13,7 @@ html.platform-linux {
     min-height: 0px !important;
   }
 }
+*/
 
 /* Add margin to top of guild list */
 [class^="tutorialContainer_"] {
@@ -74,13 +75,15 @@ span[class^="chipletContainerInner_"] {
       overflow: hidden;
       max-width: 0;
       will-change: max-width, margin;
-      transition: max-width 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+      transition:
+        max-width 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
         margin 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
     img {
       margin-right: 0;
-      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
+      transition:
+        transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
         margin 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
   }
@@ -152,13 +155,27 @@ div[class^="channelTextArea_"] {
   margin-bottom: 28px;
 }
 
-// Make typing indicator bigger
+// Make typing indicator bigger + put it below the chatbox again
 div[class^="typing_"] {
+  bottom: 0 !important;
+  top: unset !important;
   font-size: 16px !important;
+  span[class^="text"] {
+    margin-left: 2px !important;
+  }
   svg {
     width: 26px !important;
     height: 8px !important;
   }
+}
+
+// Fix weird spacing as a result of cleanup/lower typing indicator
+.align-chat-input div[class^="scrollerSpacer_"] {
+  height: 32px !important;
+}
+
+div[class*="chatGradientBase"] {
+  display: none;
 }
 
 // Hide New member name badge
